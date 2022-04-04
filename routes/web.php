@@ -38,6 +38,11 @@ Route::get('/contact', function () {
 
 Route::post('/contactform', [\App\Http\Controllers\ContactController::class, 'sendMail'] )->name('contactForm');
 
+Route::get('/order', function () {
+    return view('order');
+});
+
+Route::post('/orderSend', [\App\Http\Controllers\OrderController::class, 'sendOrder'] )->name('orderSend');
 
 // Route::post('/contactform', function () {
 //     Mail::to('test@demo.nl')->send(new ContactForm());
