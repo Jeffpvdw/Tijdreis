@@ -4,7 +4,7 @@
         <div class="flex justify-start lg:w-0 lg:flex-1">
           <a class="h-20 " href="#">
             <span class="sr-only">Workflow</span>
-            <a href="Tailwind.html"><img class="h-20" src="/images/Logo.svg" alt="Tijdreis Hardenberg Logo"></a>
+            <a href="/"><img class="h-20" src="/images/Logo.svg" alt="Tijdreis Hardenberg Logo"></a>
           </a>
         </div>
         <div class="-mr-2 -my-2 md:hidden">
@@ -37,7 +37,7 @@
             </li>
           </ul>
           <!-- themamenu -->
-          <a href="Contact.html" class="text-base font-medium text-gray-500 hover:text-gray-900"> Contact </a>
+          <a href="/contact" class="text-base font-medium text-gray-500 hover:text-gray-900"> Contact </a>
         </nav>
       </div>
       <!--
@@ -54,7 +54,7 @@
           <div class="pt-5 pb-6 px-5">
             <div class="flex items-center justify-between">
               <div class="">
-                <a href="Tailwind.html"><img class="h-20 w-auto" src="/images/Logo.svg" alt="Tijdreis Hardenberg Logo"></a>
+                <a href="/"><img class="h-20 w-auto" src="/images/Logo.svg" alt="Tijdreis Hardenberg Logo"></a>
               </div>
               <div class="-mr-2">
                 <button type="button" class="MobileMenuButton bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -89,7 +89,7 @@
                 </li>
               </ul>
               <!-- themamenu -->
-              <a href="Contact.html" class="text-base font-medium text-gray-900 hover:text-gray-700"> Contact </a>
+              <a href="/contact" class="text-base font-medium text-gray-900 hover:text-gray-700"> Contact </a>
             </div>
           </div>
         </div>

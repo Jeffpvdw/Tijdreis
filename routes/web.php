@@ -33,7 +33,7 @@ Route::get('/mail', function () {
 Route::post('/confirmorder', [\App\Http\Controllers\ConfirmOrderController::class, 'sendMail'] )->name('confirmOrder');
 
 Route::get('/contact', function () {
-    return view('contactTest');
+    return view('contact');
 });
 
 Route::post('/contactform', [\App\Http\Controllers\ContactController::class, 'sendMail'] )->name('contactForm');
