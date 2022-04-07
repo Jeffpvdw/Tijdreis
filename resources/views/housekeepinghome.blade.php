@@ -390,7 +390,7 @@
             <aside class="hidden lg:block lg:flex-shrink-0 lg:order-first">
                 <div class="h-full relative flex flex-col w-96 border-r border-gray-200 bg-gray-100 overflow-y-auto">
                     <!-- De thema-selectie -->
-                    <div class="bg-[url('../images/PPF.jpg')] w-full h-20 border border-white rounded">
+                    <div class="bg-gray-800 w-full h-20 border border-white rounded">
                         <h3 class="text-white text-2xl text-center m-5">Energie</h3>
                     </div>
                     <div>
@@ -406,5 +406,6 @@
         </main>
     </div>
 </div>
+<script src="../js/app.js"></script>
 </body>
 </html>

@@ -4989,9 +4989,13 @@ $(document).ready(function () {
     $("#editbtn").toggleClass("hidden");
     $("#cancelbtn").toggleClass("hidden");
     $("#savebtn").toggleClass("hidden");
-  });
-  $('#DeleteTrip').click(function () {
+  }); //Shows a popup to warn before deletion table
+
+  $('.DeleteTrip').click(function () {
     $("#ConfirmTxt").toggleClass("hidden");
+  });
+  $('#CustomerEdit').click(function () {
+    $("#CusConfirm").toggleClass("hidden");
   });
 });
 
