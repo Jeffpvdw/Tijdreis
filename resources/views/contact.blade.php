@@ -71,7 +71,7 @@
               <div class="ml-3">
                 <p class="text-base text-gray-500">
                   Als je dit selecteert accepteer je de
-                  <a href="Privacyverklaring.pdf" target="blank_" class="font-medium text-gray-700 underline">Privacy Policy.</a>
+                  <a href="images/Privacyverklaring.pdf" target="blank_" class="font-medium text-gray-700 underline">Privacy Policy.</a>
                 </p>
               </div>
             </div>

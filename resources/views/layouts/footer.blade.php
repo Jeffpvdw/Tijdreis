@@ -43,7 +43,7 @@
                   <p class="text-base text-gray-500"> <b>Telefoonnummer:</b><br> 0523-265624</p>
                 </li>
                 <li>
-                  <a href="Algemene-voorwaarden.pdf" target="blank_" class="text-base text-gray-500 hover:text-gray-900"><b>Voorwaarden:</b><br> <span class="underline">Algemene voorwaarden</span> </a>
+                  <a href="images/Algemene-voorwaarden.pdf" target="blank_" class="text-base text-gray-500 hover:text-gray-900"><b>Voorwaarden:</b><br> <span class="underline">Algemene voorwaarden</span> </a>
                 </li>
               </ul>
             </div>
@@ -55,7 +55,7 @@
           <a href="https://www.facebook.com/TijdreisHardenberg" class="text-gray-400 hover:text-gray-500" target="_blank">
             <i class="fa-brands fa-2x fa-facebook"></i>
           </a>
-          <a href="Contact.html" class="text-gray-400 hover:text-gray-500">
+          <a href="/contact" class="text-gray-400 hover:text-gray-500">
             <i class="fa-solid fa-2x fa-at"></i>
           </a>
         </div>

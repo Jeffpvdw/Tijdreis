@@ -17,8 +17,9 @@
           </button>
         </div>
         <nav class="hidden md:flex space-x-10">
-          <a href="payment.html" class="text-base font-medium text-gray-500 hover:text-gray-900"> Bestellen </a>
-          <a href="tour.html" class="text-base font-medium text-gray-500 hover:text-gray-900"> Tour </a>
+          <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900"> Home </a>
+          <a href="/bestel" class="text-base font-medium text-gray-500 hover:text-gray-900"> Bestellen </a>
+          <a href="/tour" class="text-base font-medium text-gray-500 hover:text-gray-900"> Tour </a>
           <!-- themamenu -->
           <ul>
             <li>
@@ -30,7 +31,7 @@
               <div id="Themas" class="hidden rounded-xl absolute z-10 block mt-5 px-5 py-3 border-2 border-slate-700 bg-white w-full max-w-fit pl-3 drop-shadow-xl">
                 <ul>
                   <li>
-                    <a href="Thema.html" class="text-base font-medium text-gray-500 hover:text-gray-900">Energie</a>
+                    <a href="/thema" class="text-base font-medium text-gray-500 hover:text-gray-900">Energie</a>
                   </li>
                 </ul>
               </div>
@@ -69,8 +70,9 @@
           </div>
           <div class="py-6 px-5">
             <div class="grid grid-cols-2 gap-4">
-              <a href="payment.html" class="text-base font-medium text-gray-900 hover:text-gray-700"> Bestellen </a>
-              <a href="tour.html" class="text-base font-medium text-gray-900 hover:text-gray-700"> Tour </a>
+              <a href="/" class="text-base font-medium text-gray-900 hover:text-gray-700"> Home </a>
+              <a href="/bestel" class="text-base font-medium text-gray-900 hover:text-gray-700"> Bestellen </a>
+              <a href="/tour" class="text-base font-medium text-gray-900 hover:text-gray-700"> Tour </a>
               <!-- themamenu -->
               <ul>
                 <li>
@@ -82,7 +84,7 @@
                   <div id="MobileThemas" class="hidden rounded-xl absolute z-10 block mt-5 px-5 py-3 border-2 border-slate-700 bg-white w-full max-w-fit pl-3 drop-shadow-xl">
                     <ul>
                       <li>
-                        <a href="Thema.html" class="text-base font-medium text-gray-500 hover:text-gray-900">Energie</a>
+                        <a href="/thema" class="text-base font-medium text-gray-500 text-gray-900">Energie</a>
                       </li>
                     </ul>
                   </div>

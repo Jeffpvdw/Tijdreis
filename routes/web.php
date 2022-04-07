@@ -20,6 +20,42 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/bestel', function () {
+    return view('bestel');
+});
+
+Route::get('/gegevens', function () {
+    return view('gegevens');
+});
+
+Route::get('/tour', function () {
+    return view('tour');
+});
+
+Route::get('/thema', function () {
+    return view('thema');
+});
+
+Route::get('/succes', function () {
+    return view('succes');
+});
+
+Route::get('/fout', function () {
+    return view('fout');
+});
+
+Route::get('/housekeeping', function () {
+    return view('housekeeping');
+});
+
+Route::get('/housekeeping/home', function () {
+    return view('housekeepinghome');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
@@ -32,9 +68,9 @@ Route::get('/mail', function () {
 
 Route::post('/confirmorder', [\App\Http\Controllers\ConfirmOrderController::class, 'sendMail'] )->name('confirmOrder');
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+// Route::get('/contact', function () {
+//     return view('contactTest');
+// });
 
 Route::post('/contactform', [\App\Http\Controllers\ContactController::class, 'sendMail'] )->name('contactForm');
 
