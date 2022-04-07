@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
 
-class orderController extends Controller
+class OrderController extends Controller
 {
     public function validate_phone_number($phone_number)
     {
@@ -20,10 +22,11 @@ class orderController extends Controller
        }
     }
 
-    public function validate_phone($phone)
+    public function validate_phone(Request $request)
     {
-    if (isset($_POST['telefoonnummer']) == true && empty($_POST['telefoonnummer']) == false) {
-       $phone = $_POST['telefoonnummer'] ?? null;
+    $telefoonnummer = $request->input('telefoonnummer');
+    if (isset($telefoonnummer) == true && empty($telefoonnummer) == false) {
+       $phone = $telefoonnummer ?? null;
        if (($phone) == true) {
           //
        } else {
@@ -32,10 +35,11 @@ class orderController extends Controller
     }
 }
 
-    public function validate_mail()
+    public function validate_mail(Request $request)
     {
-        if (isset($_POST['user_mail']) == true && empty($_POST['user_mail']) == false) {
-            $email = $_POST['user_mail'];
+        $user_mail = $request->input('user_mail');
+        if (isset($user_mail) == true && empty($user_mail) == false) {
+            $email = $user_mail;
         
             if (filter_var($email, FILTER_VALIDATE_EMAIL) == true) {
                 // nay

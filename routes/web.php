@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ConfirmOrder;
 use App\Mail\ContactForm;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,14 @@ Route::get('/contact', function () {
 
 Route::get('/bestel', function () {
     return view('bestel');
+});
+
+Route::get('/gegevens', function () {
+    return view('gegevens');
+});
+
+Route::post('/gegevens', function () {
+    return view('gegevens');
 });
 
 Route::get('/gegevens', function () {
