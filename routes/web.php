@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,5 +19,13 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+Route::get('/mollie', function () {
+    return view('mollie');
+});
+
+Route::get('/pay', function () {
+    return view('pay');
+});
 
 require __DIR__.'/auth.php';
