@@ -4970,6 +4970,30 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
+$(document).ready(function () {
+  $('.dropbtn').click(function () {
+    //rotates arrow next to "Thema's" button
+    $(".HeaderArrow").toggleClass("rotate-180"); //opens dropdown menu that shows themes
+
+    $("#Themas").toggleClass("hidden");
+    $("#MobileThemas").toggleClass("hidden");
+  }); //opens/closes hamburger menu in mobile
+
+  $('.MobileMenuButton').click(function () {
+    $("#dropdown-content").toggleClass("hidden");
+  }); //controls the editor for the HousekeepingHome.html table
+
+  $('.ToggleEdit').click(function () {
+    $("#popup").toggleClass("hidden");
+    $("#popup2").toggleClass("hidden");
+    $("#editbtn").toggleClass("hidden");
+    $("#cancelbtn").toggleClass("hidden");
+    $("#savebtn").toggleClass("hidden");
+  });
+  $('#DeleteTrip').click(function () {
+    $("#ConfirmTxt").toggleClass("hidden");
+  });
+});
 
 /***/ }),
 
