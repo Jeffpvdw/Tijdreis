@@ -4,10 +4,7 @@ namespace App\Models;
 
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
-<<<<<<< Updated upstream
 use App\Models\Theme;
-=======
->>>>>>> Stashed changes
 
 class Tour extends Model
 {
@@ -39,13 +36,10 @@ class Tour extends Model
     |--------------------------------------------------------------------------
     */
 
-<<<<<<< Updated upstream
     public function themes(){
         return $this->belongsTo(Theme::class);
     }
 
-=======
->>>>>>> Stashed changes
     /*
     |--------------------------------------------------------------------------
     | SCOPES
