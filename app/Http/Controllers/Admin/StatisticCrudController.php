@@ -28,7 +28,7 @@ class StatisticCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\Statistic::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/statistic');
-        CRUD::setEntityNameStrings('statistic', 'statistics');
+        CRUD::setEntityNameStrings('Statestiek', 'Statestieken');
     }
 
     /**
@@ -39,13 +39,10 @@ class StatisticCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('id');
-        CRUD::column('participant_id');
-        CRUD::column('tour_id');
-        CRUD::column('zipcode');
-        CRUD::column('birthdate');
-        CRUD::column('created_at');
-        CRUD::column('updated_at');
+        CRUD::column('zipcode')->label('Postcode');
+        CRUD::column('birthdate')->label('Geboortedatum');
+        CRUD::column('created_at')->label('Gemaakt op');
+        CRUD::column('updated_at')->label('Veranderd op');
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:

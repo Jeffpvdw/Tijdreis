@@ -28,7 +28,7 @@ class ReservationCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\Reservation::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/reservation');
-        CRUD::setEntityNameStrings('reservation', 'reservations');
+        CRUD::setEntityNameStrings('Reservering', 'Reserveringen');
     }
 
     /**
