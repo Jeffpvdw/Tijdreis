@@ -40,9 +40,13 @@ class ThemeCrudController extends CrudController
     protected function setupListOperation()
     {
         CRUD::column('id');
+<<<<<<< Updated upstream
         CRUD::column('name');
         CRUD::column('created_at');
         CRUD::column('updated_at');
+=======
+        CRUD::column('title');
+>>>>>>> Stashed changes
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -62,9 +66,13 @@ class ThemeCrudController extends CrudController
         CRUD::setValidation(ThemeRequest::class);
 
         CRUD::field('id');
+<<<<<<< Updated upstream
         CRUD::field('name');
         CRUD::field('created_at');
         CRUD::field('updated_at');
+=======
+        CRUD::field('title');
+>>>>>>> Stashed changes
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

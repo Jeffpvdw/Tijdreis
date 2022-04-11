@@ -68,30 +68,20 @@
               placeholder="1234AB" required>
           </div>
         </div>
-        <div class="sm:col-span-2 sm:flex sm:justify-between">
-          <div>
-            <label for="first-name" class="block text-sm font-medium text-gray-700">Voornaam</label>
-            <div class="mt-1">
-              <input type="text" name="first-name" id="first-name" autocomplete="given-name"
-                class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-                placeholder="Jan" required>
-            </div>
+        <div>
+          <label for="first-name" class="block text-sm font-medium text-gray-700">Voornaam</label>
+          <div class="mt-1">
+            <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+              class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+              placeholder="Jan" required>
           </div>
-          <div class="mt-5 sm:mt-0">
-            <label for="proposition" class="block text-sm font-medium text-gray-700">Tussenvoegsel</label>
-            <div class="mt-1">
-              <input type="text" name="proposition" id="proposition" autocomplete="proposition"
-                class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-                placeholder="Van">
-            </div>
-          </div>
-          <div class="mt-5 sm:mt-0">
-            <label for="last-name" class="block text-sm font-medium text-gray-700">Achternaam</label>
-            <div class="mt-1">
-              <input type="text" name="last-name" id="last-name" autocomplete="family-name"
-                class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-                placeholder="Timmer" required>
-            </div>
+        </div>
+        <div>
+          <label for="last-name" class="block text-sm font-medium text-gray-700">Achternaam</label>
+          <div class="mt-1">
+            <input type="text" name="last-name" id="last-name" autocomplete="family-name"
+              class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+              placeholder="Timmer" required>
           </div>
         </div>
         {{-- <div>
