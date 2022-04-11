@@ -20,12 +20,9 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/mollie', function () {
-    return view('mollie');
-});
+Route::get('/mollie', [\App\Http\Controllers\PaymentController::class, 'testPayment']);
 
-Route::get('/pay', function () {
-    return view('pay');
-});
 
 require __DIR__.'/auth.php';
+
+
