@@ -117,7 +117,7 @@
         <div>
           <label for="birthday[]" class="block text-sm font-medium text-gray-700">Geboortedatum</label>
           <div class="mt-1 sm:flex sm:justify-between">
-            <input type="month" value="2022-04">
+            <input type="month" value="2022-04" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
           </div>
         </div>
         <div>

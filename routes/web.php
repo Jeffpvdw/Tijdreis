@@ -25,6 +25,10 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/contactsend', function () {
+    return view('contactsend');
+});
+
 Route::get('/bestel', function () {
     return view('bestel');
 });
