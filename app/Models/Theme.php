@@ -4,7 +4,10 @@ namespace App\Models;
 
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
+
 use App\Models\Tour;
+
+
 
 class Theme extends Model
 {
@@ -36,9 +39,11 @@ class Theme extends Model
     |--------------------------------------------------------------------------
     */
 
+
     public function tours(){
         return $this->belongsTo(Tour::class, 'theme_id');
     }
+
 
     /*
     |--------------------------------------------------------------------------

@@ -6,6 +6,7 @@ use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Theme;
 
+
 class Tour extends Model
 {
     use CrudTrait;
@@ -36,9 +37,11 @@ class Tour extends Model
     |--------------------------------------------------------------------------
     */
 
+
     public function themes(){
         return $this->belongsTo(Theme::class);
     }
+
 
     /*
     |--------------------------------------------------------------------------

@@ -28,7 +28,7 @@ class ThemeCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\Theme::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/theme');
-        CRUD::setEntityNameStrings('theme', 'themes');
+        CRUD::setEntityNameStrings('Thema', 'Themas');
     }
 
     /**
@@ -39,10 +39,10 @@ class ThemeCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('id');
-        CRUD::column('name');
-        CRUD::column('created_at');
-        CRUD::column('updated_at');
+        CRUD::column('name')->label('Naam');
+        CRUD::column('created_at')->label('Gemaakt op');
+        CRUD::column('updated_at')->label('Veranderd op');
+
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -61,10 +61,8 @@ class ThemeCrudController extends CrudController
     {
         CRUD::setValidation(ThemeRequest::class);
 
-        CRUD::field('id');
-        CRUD::field('name');
-        CRUD::field('created_at');
-        CRUD::field('updated_at');
+        CRUD::field('name')->label('Naam');
+
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

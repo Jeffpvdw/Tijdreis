@@ -33,7 +33,7 @@
     </div>
     <div class="mt-12">
       <form action="/gegevens" method="post" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
-      @csrf
+
         <div class="sm:col-span-2">
           <label for="company" class="block text-sm font-medium text-gray-700">Datum selecteren tour</label>
           <div class="sm:flex sm:justify-between">
@@ -47,7 +47,7 @@
           <div class="mt-1">
             <input type="email" name="user_mail" id="user_mail" autocomplete="organization"
               class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-              placeholder="jantimmer@gmail.com" required>
+              placeholder="jantimmer@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Voer een geldig emailadres in" required>
           </div>
         </div>
         <div>
@@ -56,7 +56,7 @@
           <div class="mt-1">
             <input type="text" name="telefoonnumer" id="telefoonnummer" autocomplete="organization"
               class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-              placeholder="0612345678">
+              placeholder="0612345678" maxlength="10" minlength="10" pattern="[0-9]+" required>
           </div>
 
         </div>
@@ -68,30 +68,20 @@
               placeholder="1234AB" required>
           </div>
         </div>
-        <div class="sm:col-span-2 sm:flex sm:justify-between">
-          <div>
-            <label for="first-name" class="block text-sm font-medium text-gray-700">Voornaam</label>
-            <div class="mt-1">
-              <input type="text" name="first-name" id="first-name" autocomplete="given-name"
-                class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-                placeholder="Jan" required>
-            </div>
+        <div>
+          <label for="first-name" class="block text-sm font-medium text-gray-700">Voornaam</label>
+          <div class="mt-1">
+            <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+              class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+              placeholder="Jan" required>
           </div>
-          <div class="mt-5 sm:mt-0">
-            <label for="proposition" class="block text-sm font-medium text-gray-700">Tussenvoegsel</label>
-            <div class="mt-1">
-              <input type="text" name="proposition" id="proposition" autocomplete="proposition"
-                class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-                placeholder="Van">
-            </div>
-          </div>
-          <div class="mt-5 sm:mt-0">
-            <label for="last-name" class="block text-sm font-medium text-gray-700">Achternaam</label>
-            <div class="mt-1">
-              <input type="text" name="last-name" id="last-name" autocomplete="family-name"
-                class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-                placeholder="Timmer" required>
-            </div>
+        </div>
+        <div>
+          <label for="last-name" class="block text-sm font-medium text-gray-700">Achternaam</label>
+          <div class="mt-1">
+            <input type="text" name="last-name" id="last-name" autocomplete="family-name"
+              class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+              placeholder="Timmer" required>
           </div>
         </div>
         {{-- <div>
@@ -147,7 +137,7 @@
                 <span class="slider round"></span>
               </label>
               <span class="sr-only">Accepteer de policies</span>
-              <!-- Enabled: "translate-x-5", Not Enabled: "translate-x-0" -->
+             
             </div>
             <div class="ml-3">
               <p class="text-base text-gray-500">
