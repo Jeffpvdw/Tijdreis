@@ -28,7 +28,7 @@ class ReservationCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\Reservation::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/reservation');
-        CRUD::setEntityNameStrings('reservation', 'reservations');
+        CRUD::setEntityNameStrings('Reservering', 'Reserveringen');
     }
 
     /**
@@ -39,13 +39,11 @@ class ReservationCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('id');
-        CRUD::column('tour_id');
-        CRUD::column('email');
-        CRUD::column('phone');
-        CRUD::column('comment');
-        CRUD::column('created_at');
-        CRUD::column('updated_at');
+        CRUD::column('email')->label('E-mail');
+        CRUD::column('phone')->label('Telefoonnummer');
+        CRUD::column('comment')->label('Opmerking');
+        CRUD::column('created_at')->label('Gemaakt op');
+        CRUD::column('updated_at')->label('Veranderd op');
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:

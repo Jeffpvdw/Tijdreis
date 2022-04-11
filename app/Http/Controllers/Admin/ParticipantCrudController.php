@@ -28,7 +28,7 @@ class ParticipantCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\Participant::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/participant');
-        CRUD::setEntityNameStrings('participant', 'participants');
+        CRUD::setEntityNameStrings('Deelnemer', 'Deelnemers');
     }
 
     /**
@@ -39,13 +39,11 @@ class ParticipantCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('id');
-        CRUD::column('reservation_id');
-        CRUD::column('firstname');
-        CRUD::column('preposition');
-        CRUD::column('lastname');
-        CRUD::column('created_at');
-        CRUD::column('updated_at');
+        CRUD::column('firstname')->label('Voornaam');
+        CRUD::column('preposition')->label('Tussenvoegsel');
+        CRUD::column('lastname')->label('Achternaam');
+        CRUD::column('created_at')->label('Gemaakt op');
+        CRUD::column('updated_at')->label('Veranderd op');
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
