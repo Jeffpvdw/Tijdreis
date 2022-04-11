@@ -33,11 +33,11 @@ Route::get('/gegevens', function () {
     return view('gegevens');
 });
 
-Route::post('/gegevens', function () {
+Route::get('/gegevens', function () {
     return view('gegevens');
 });
 
-Route::get('/gegevens', function () {
+Route::post('/gegevens', function () {
     return view('gegevens');
 });
 
