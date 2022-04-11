@@ -33,7 +33,7 @@
     </div>
     <div class="mt-12">
       <form action="/gegevens" method="post" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
-    
+
         <div class="sm:col-span-2">
           <label for="company" class="block text-sm font-medium text-gray-700">Datum selecteren tour</label>
           <div class="sm:flex sm:justify-between">
@@ -137,7 +137,7 @@
                 <span class="slider round"></span>
               </label>
               <span class="sr-only">Accepteer de policies</span>
-              <!-- Enabled: "translate-x-5", Not Enabled: "translate-x-0" -->
+             
             </div>
             <div class="ml-3">
               <p class="text-base text-gray-500">
