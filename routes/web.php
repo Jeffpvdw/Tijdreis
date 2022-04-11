@@ -33,11 +33,37 @@ Route::get('/gegevens', function () {
     return view('gegevens');
 });
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+>>>>>>> dev
+=======
+>>>>>>> dev
+>>>>>>> Stashed changes
 Route::post('/gegevens', function () {
     return view('gegevens');
 });
 
 Route::get('/gegevens', function () {
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+Route::get('/gegevens', function () {
+    return view('gegevens');
+});
+
+Route::post('/gegevens', function () {
+>>>>>>> Stashed changes
+=======
+>>>>>>> dev
+=======
+>>>>>>> dev
+>>>>>>> Stashed changes
     return view('gegevens');
 });
 
