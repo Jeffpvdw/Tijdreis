@@ -39,7 +39,7 @@ class TourCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-<<<<<<< Updated upstream
+
         CRUD::column('theme_id')->label('Thema');
         CRUD::column('dateTime');
         CRUD::column('capacity');
@@ -48,7 +48,7 @@ class TourCrudController extends CrudController
         CRUD::column('price_child');
         CRUD::column('created_at');
         CRUD::column('updated_at');
-=======
+
         CRUD::column('id');
         CRUD::column('theme_id');
         CRUD::column('date');
@@ -56,7 +56,7 @@ class TourCrudController extends CrudController
         CRUD::column('start_location');
         CRUD::column('price_adult');
         CRUD::column('price_child');
->>>>>>> Stashed changes
+
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -77,7 +77,7 @@ class TourCrudController extends CrudController
 
         CRUD::field('id');
         CRUD::field('theme_id');
-<<<<<<< Updated upstream
+
         CRUD::field('dateTime');
         CRUD::field('capacity');
         CRUD::field('start_location');
@@ -85,13 +85,13 @@ class TourCrudController extends CrudController
         CRUD::field('price_child');
         CRUD::field('created_at');
         CRUD::field('updated_at');
-=======
+
         CRUD::field('date');
         CRUD::field('max_participants');
         CRUD::field('start_location');
         CRUD::field('price_adult');
         CRUD::field('price_child');
->>>>>>> Stashed changes
+
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

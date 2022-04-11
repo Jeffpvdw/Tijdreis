@@ -44,11 +44,11 @@ class ReservationCrudController extends CrudController
         CRUD::column('email');
         CRUD::column('phone');
         CRUD::column('comment');
-<<<<<<< Updated upstream
+
         CRUD::column('created_at');
         CRUD::column('updated_at');
-=======
->>>>>>> Stashed changes
+
+
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -72,11 +72,11 @@ class ReservationCrudController extends CrudController
         CRUD::field('email');
         CRUD::field('phone');
         CRUD::field('comment');
-<<<<<<< Updated upstream
+
         CRUD::field('created_at');
         CRUD::field('updated_at');
 =======
->>>>>>> Stashed changes
+
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

@@ -17,13 +17,13 @@ Route::group([
     'namespace'  => 'App\Http\Controllers\Admin',
 ], function () { // custom admin routes
     Route::crud('tour', 'TourCrudController');
-<<<<<<< Updated upstream
+
     Route::crud('reservation', 'ReservationCrudController');
     Route::crud('participant', 'ParticipantCrudController');
     Route::crud('statistic', 'StatisticCrudController');
     Route::crud('theme', 'ThemeCrudController');
-=======
+
     Route::crud('theme', 'ThemeCrudController');
     Route::crud('reservation', 'ReservationCrudController');
->>>>>>> Stashed changes
+
 }); // this should be the absolute last line of this file
