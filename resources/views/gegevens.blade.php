@@ -33,7 +33,7 @@
     </div>
     <div class="mt-12">
       <form action="/gegevens" method="post" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
-      @csrf
+    
         <div class="sm:col-span-2">
           <label for="company" class="block text-sm font-medium text-gray-700">Datum selecteren tour</label>
           <div class="sm:flex sm:justify-between">
@@ -47,7 +47,7 @@
           <div class="mt-1">
             <input type="email" name="user_mail" id="user_mail" autocomplete="organization"
               class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-              placeholder="jantimmer@gmail.com" required>
+              placeholder="jantimmer@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Voer een geldig emailadres in" required>
           </div>
         </div>
         <div>
@@ -56,7 +56,7 @@
           <div class="mt-1">
             <input type="text" name="telefoonnumer" id="telefoonnummer" autocomplete="organization"
               class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-              placeholder="0612345678">
+              placeholder="0612345678" maxlength="10" minlength="10" pattern="[0-9]+" required>
           </div>
 
         </div>
