@@ -15,12 +15,15 @@ class CreateToursTable extends Migration
     {
         Schema::create('tours', function (Blueprint $table) {
             $table->id();
-            $table->integer('theme_id');
-            $table->dateTime('date');
-            $table->integer('max_participants');
+            $table->unsignedBigInteger('theme_id')->nullable();
+            $table->timestamp('dateTime');
+            $table->integer('capacity')->min('0');
             $table->string('start_location');
             $table->decimal('price_adult', $precision = 8, $scale = 2);
             $table->decimal('price_child', $precision = 8, $scale = 2);
+            $table->timestamps();
+
+            $table->foreign('theme_id')->references('id')->on('themes');
         });
     }
 

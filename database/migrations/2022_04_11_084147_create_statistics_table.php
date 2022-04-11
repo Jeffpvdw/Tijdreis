@@ -15,10 +15,14 @@ class CreateStatisticsTable extends Migration
     {
         Schema::create('statistics', function (Blueprint $table) {
             $table->id();
-            $table->integer('participant_id');
-            $table->integer('tour_id');
-            $table->string('zip', 64);
+            $table->unsignedBigInteger('participant_id')->nullable();
+            $table->unsignedBigInteger('tour_id')->nullable();
+            $table->string('zipcode', 64);
             $table->date('birthdate');
+            $table->timestamps();
+
+            $table->foreign('participant_id')->references('id')->on('participants');
+            $table->foreign('tour_id')->references('id')->on('tours');
         });
     }
 

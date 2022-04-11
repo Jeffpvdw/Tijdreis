@@ -15,9 +15,13 @@ class CreateParticipantsTable extends Migration
     {
         Schema::create('participants', function (Blueprint $table) {
             $table->id();
-            $table->integer('reservation_id');
+            $table->unsignedBigInteger('reservation_id')->nullable();
             $table->string('firstname', 64);
+            $table->string('preposition', 16)->nullable();
             $table->string('lastname', 64);
+            $table->timestamps();
+
+            $table->foreign('reservation_id')->references('id')->on('reservations');
         });
     }
 

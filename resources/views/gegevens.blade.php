@@ -28,7 +28,7 @@
       <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Persoonlijke gegevens</h2>
     </div>
     <div class="mt-12">
-      <form action="#" method="POST" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+      <form action="/gegevens" method="post" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
         <div class="sm:col-span-2">
           <label for="company" class="block text-sm font-medium text-gray-700">Datum selecteren tour</label>
           <div class="sm:flex sm:justify-between">
@@ -47,16 +47,18 @@
         </div>
         <div>
           <label for="phonenumber" class="block text-sm font-medium text-gray-700">Telefoonnummer</label>
+
           <div class="mt-1">
             <input type="text" name="phonenumber" id="phonenumber" autocomplete="organization"
               class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
               placeholder="0612345678">
           </div>
+
         </div>
         <div>
           <label for="postcode" class="block text-sm font-medium text-gray-700">Postcode</label>
           <div class="mt-1">
-            <input type="text" name="postcode" id="postcode" autocomplete="given-name"
+            <input type="text" name="postcode" id="postcode" autocomplete="given-name"  pattern="[0-9]{4}[A-Z]{2}" maxlength="6"
               class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
               placeholder="1234AB" required>
           </div>
@@ -77,7 +79,7 @@
               placeholder="Timmer" required>
           </div>
         </div>
-        <div>
+        {{-- <div>
           <label for="birthday[]" class="block text-sm font-medium text-gray-700">Geboortedatum</label>
           <div class="mt-1 sm:flex sm:justify-between">
             <select name="birthday[]" id="birthday[]" class="bg-white py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md sm:mr-1">
@@ -95,6 +97,12 @@
               <option>december</option>
             </select>
             <input name="birthday[]" id="birthday[]" type="text" placeholder="Jaartal" maxlength="4" class="bg-white py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md sm:ml-1 sm:mt-0 mt-4">
+          </div>
+        </div> --}}
+        <div>
+          <label for="birthday[]" class="block text-sm font-medium text-gray-700">Geboortedatum</label>
+          <div class="mt-1 sm:flex sm:justify-between">
+            <input type="month" value="2022-04">
           </div>
         </div>
         <div>
