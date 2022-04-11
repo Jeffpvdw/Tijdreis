@@ -67,8 +67,11 @@ class ReservationCrudController extends CrudController
         CRUD::field('email');
         CRUD::field('phone');
         CRUD::field('comment');
+<<<<<<< Updated upstream
         CRUD::field('created_at');
         CRUD::field('updated_at');
+=======
+>>>>>>> Stashed changes
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

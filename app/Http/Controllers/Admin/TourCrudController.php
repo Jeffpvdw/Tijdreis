@@ -39,6 +39,7 @@ class TourCrudController extends CrudController
      */
     protected function setupListOperation()
     {
+<<<<<<< Updated upstream
         CRUD::column('theme_id')->label('Thema');
         CRUD::column('dateTime')->label('Datum');
         CRUD::column('capacity')->label('Max. Deelnemers');
