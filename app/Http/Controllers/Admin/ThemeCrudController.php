@@ -43,7 +43,6 @@ class ThemeCrudController extends CrudController
         CRUD::column('name');
         CRUD::column('created_at');
         CRUD::column('updated_at');
-=======
         CRUD::column('title');
 
 
@@ -69,7 +68,6 @@ class ThemeCrudController extends CrudController
         CRUD::field('name');
         CRUD::field('created_at');
         CRUD::field('updated_at');
-=======
         CRUD::field('title');
 
 
