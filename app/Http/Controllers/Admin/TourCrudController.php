@@ -76,7 +76,15 @@ class TourCrudController extends CrudController
     {
         CRUD::setValidation(TourRequest::class);
 
-        CRUD::field('theme_id')->label('Thema')->type('select')->name('theme_id')->entity('themes')->attribute('name')->model('App\Models\Theme');
+        $this->crud->addField([
+            'label' => "Thema",
+            'type' => 'select',
+            'name' => 'theme_id', // the db column for the foreign key
+            'entity' => 'themes', // the method that defines the relationship in your Model
+            'attribute' => 'name', // foreign key attribute that is shown to user
+            'model' => "App\Models\Theme" // foreign key model
+        ]);
+        // CRUD::field('theme_id')->label('Thema')->type('select')->name('theme_id')->entity('themes')->attribute('name')->model('App\Models\Theme');
         CRUD::field('dateTime')->label('Datum en Tijd');
         CRUD::field('capacity')->label('Max. Deelnemers');
         CRUD::field('start_location')->label('Start locatie');
