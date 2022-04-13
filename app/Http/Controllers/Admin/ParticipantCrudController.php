@@ -87,4 +87,12 @@ class ParticipantCrudController extends CrudController
     {
         $this->setupCreateOperation();
     }
+    protected function setupShowOperation()
+    {
+        CRUD::column('firstname')->label('Voornaam');
+        CRUD::column('preposition')->label('Tussenvoegsel');
+        CRUD::column('lastname')->label('Achternaam');
+        CRUD::column('created_at')->label('Gemaakt op');
+        CRUD::column('updated_at')->label('Veranderd op');
+    }
 }

@@ -81,4 +81,10 @@ class ThemeCrudController extends CrudController
     {
         $this->setupCreateOperation();
     }
+    protected function setupShowOperation()
+    {
+        CRUD::column('name')->label('Naam');
+        CRUD::column('created_at')->label('Gemaakt op');
+        CRUD::column('updated_at')->label('Veranderd op');
+    }
 }

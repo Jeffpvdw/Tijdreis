@@ -97,4 +97,14 @@ class ReservationCrudController extends CrudController
     {
         $this->setupCreateOperation();
     }
+    protected function setupShowOperation()
+    {
+        CRUD::column('tour_id')->label('Tour')->type('select')->name('tour_id')->entity('reservations')->attribute('dateTime')->model('App\Models\Reservation');
+        // CRUD::column('tour_id')->label('Tour');
+        CRUD::column('email')->label('E-mail');
+        CRUD::column('phone')->label('Telefoonnummer');
+        CRUD::column('comment')->label('Commentaar');
+        CRUD::column('created_at')->label('Gemaakt op');
+        CRUD::column('updated_at')->label('Veranderd op');
+    }
 }
