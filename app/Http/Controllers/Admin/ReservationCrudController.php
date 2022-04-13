@@ -39,7 +39,7 @@ class ReservationCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('tour_id')->label('Tour')->type('select')->name('tour_id')->entity('tours')->attribute('dateTime')->model('App\Models\Reservation');
+        CRUD::column('tour_id')->label('Tour')->type('select')->name('tour_id')->entity('reservations')->attribute('dateTime')->model('App\Models\Reservation');
         // CRUD::column('tour_id')->label('Tour');
         CRUD::column('email')->label('E-mail');
         CRUD::column('phone')->label('Telefoonnummer');
@@ -66,15 +66,15 @@ class ReservationCrudController extends CrudController
     {
         CRUD::setValidation(ReservationRequest::class);
 
-        // $this->crud->addField([
-        //     'label' => "Tour",
-        //     'type' => 'select',
-        //     'name' => 'tour_id', // the db column for the foreign key
-        //     'entity' => 'tours', // the method that defines the relationship in your Model
-        //     'attribute' => 'tour_id', // foreign key attribute that is shown to user
-        //     'model' => "App\Models\Reservation" // foreign key model
-        // ]);
-        CRUD::field('tour_id')->label('Tour')->type('select')->name('tour_id')->entity('tours')->attribute('dateTime')->model('App\Models\Reservation');
+        $this->crud->addField([
+            'label' => "Tour0",
+            'type' => 'select',
+            'name' => 'tour_id', // the db column for the foreign key
+            'entity' => 'reservations', // the method that defines the relationship in your Model
+            'attribute' => 'dateTime', // foreign key attribute that is shown to user
+            'model' => "App\Models\Tour" // foreign key model
+        ]);
+        // CRUD::field('tour_id')->label('Tour')->type('select')->name('tour_id')->entity('reservations')->attribute('dateTime')->model('App\Models\Tour');
         // CRUD::field('tour_id')->label('Tour');
         CRUD::field('email')->label('E-mail');
         CRUD::field('phone')->label('Telefoonnummer');

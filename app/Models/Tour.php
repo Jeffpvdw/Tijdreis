@@ -5,6 +5,7 @@ namespace App\Models;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Theme;
+use App\Models\Reservation;
 
 
 class Tour extends Model
@@ -23,7 +24,7 @@ class Tour extends Model
     protected $guarded = ['id'];
     // protected $fillable = [];
     // protected $hidden = [];
-    // protected $dates = [];
+    // protected $dates = [];0
 
     /*
     |--------------------------------------------------------------------------
@@ -45,6 +46,7 @@ class Tour extends Model
     public function reservations(){
         return $this->hasMany(Reservation::class);
     }
+
 
     /*
     |--------------------------------------------------------------------------
