@@ -37,7 +37,7 @@
               <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">  </a>
               <ul role="list" class="mt-4 space-y-4">
                 <li>
-                  <p class="text-base text-gray-500"> <b>Email:</b><br> info@hvhardenberg.nl</p>
+                  <p class="text-base text-gray-500"> <b>Email:</b><br> Tijdreis@hvhardenberg.nl</p>
                 </li>
                 <li>
                   <p class="text-base text-gray-500"> <b>Telefoonnummer:</b><br> 0523-265624</p>
