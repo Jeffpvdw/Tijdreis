@@ -86,4 +86,11 @@ class StatisticCrudController extends CrudController
     {
         $this->setupCreateOperation();
     }
+    protected function setupShowOperation()
+    {
+        CRUD::column('zipcode')->label('Postcode');
+        CRUD::column('birthdate')->label('Geboortedatum');
+        CRUD::column('created_at')->label('Gemaakt op');
+        CRUD::column('updated_at')->label('Veranderd op');
+    }
 }

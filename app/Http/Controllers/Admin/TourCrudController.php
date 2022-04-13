@@ -109,4 +109,15 @@ class TourCrudController extends CrudController
     {
         $this->setupCreateOperation();
     }
+    protected function setupShowOperation()
+    {
+        CRUD::column('theme_id')->label('Thema')->type('select')->name('theme_id')->entity('themes')->attribute('name')->model('App\Models\Theme');
+        CRUD::column('dateTime')->label('Datum');
+        CRUD::column('capacity')->label('Max. Deelnemers');
+        CRUD::column('start_location')->label('Start locatie');
+        CRUD::column('price_adult')->label('Prijs Volwassenen');
+        CRUD::column('price_child')->label('Prijs Kinderen');
+        CRUD::column('created_at')->label('Gemaakt op');
+        CRUD::column('updated_at')->label('Veranderd op');
+    }
 }
