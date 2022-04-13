@@ -67,7 +67,7 @@ class ReservationCrudController extends CrudController
         CRUD::setValidation(ReservationRequest::class);
 
         $this->crud->addField([
-            'label' => "Tour0",
+            'label' => "Tour",
             'type' => 'select',
             'name' => 'tour_id', // the db column for the foreign key
             'entity' => 'reservations', // the method that defines the relationship in your Model
