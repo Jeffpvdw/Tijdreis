@@ -14,12 +14,12 @@ $(document).ready(function(){
       $("#Themas").toggleClass("hidden");
       $("#MobileThemas").toggleClass("hidden");
     });
-  
+
     //opens/closes hamburger menu in mobile
     $('.MobileMenuButton').click(function(){
       $("#dropdown-content").toggleClass("hidden");
     });
-  
+
     //controls the editor for the HousekeepingHome.html table
     $('.ToggleEdit').click(function(){
       $("#popup").toggleClass("hidden");
@@ -28,7 +28,7 @@ $(document).ready(function(){
       $("#cancelbtn").toggleClass("hidden");
       $("#savebtn").toggleClass("hidden");
     });
-  
+
     $('#DeleteTrip').click(function(){
       $("#ConfirmTxt").toggleClass("hidden");
     })
