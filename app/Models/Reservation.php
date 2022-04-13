@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Tour;
+use App\Models\Participant;
 
 class Reservation extends Model
 {
@@ -34,6 +36,14 @@ class Reservation extends Model
     | RELATIONS
     |--------------------------------------------------------------------------
     */
+
+    public function reservations(){
+        return $this->belongsTo(Tour::class, 'tour_id', 'id');
+    }
+
+    public function participants(){
+        return $this->hasMany(Participant::class);
+    }
 
     /*
     |--------------------------------------------------------------------------

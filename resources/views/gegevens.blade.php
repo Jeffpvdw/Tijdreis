@@ -33,7 +33,7 @@
     </div>
     <div class="mt-12">
       <form action="/gegevens" method="post" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
-      @csrf
+
         <div class="sm:col-span-2">
           <label for="company" class="block text-sm font-medium text-gray-700">Datum selecteren tour</label>
           <div class="sm:flex sm:justify-between">
@@ -47,7 +47,7 @@
           <div class="mt-1">
             <input type="email" name="user_mail" id="user_mail" autocomplete="organization"
               class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-              placeholder="jantimmer@gmail.com" required>
+              placeholder="jantimmer@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Voer een geldig emailadres in" required>
           </div>
         </div>
         <div>
@@ -56,7 +56,7 @@
           <div class="mt-1">
             <input type="text" name="telefoonnumer" id="telefoonnummer" autocomplete="organization"
               class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-              placeholder="0612345678">
+              placeholder="0612345678" maxlength="10" minlength="10" pattern="[0-9]+" required>
           </div>
 
         </div>
@@ -68,57 +68,50 @@
               placeholder="1234AB" required>
           </div>
         </div>
-        <div>
-          <label for="first-name" class="block text-sm font-medium text-gray-700">Voornaam</label>
-          <div class="mt-1">
-            <input type="text" name="first-name" id="first-name" autocomplete="given-name"
-              class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-              placeholder="Jan" required>
+          <div id="copy" class="sm:col-span-2">
+            <div class="sm:col-span-2 sm:flex sm:justify-between">
+              <div>
+                <label for="first-name" class="block text-sm font-medium text-gray-700">Voornaam</label>
+                <div class="mt-1">
+                  <input type="text" name="first-name_" id="first-name_" autocomplete="given-name"
+                    class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                    placeholder="Jan" required>
+                </div>
+              </div>
+              <div class="mt-5 sm:mt-0">
+                <label for="proposition" class="block text-sm font-medium text-gray-700">Tussenvoegsel</label>
+                <div class="mt-1">
+                  <input type="text" name="proposition_" id="proposition_" autocomplete="proposition"
+                    class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                    placeholder="Van">
+                </div>
+              </div>
+              <div class="mt-5 sm:mt-0">
+                <label for="last-name" class="block text-sm font-medium text-gray-700">Achternaam</label>
+                <div class="mt-1">
+                  <input type="text" name="last-name_" id="last-name_" autocomplete="family-name"
+                    class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                    placeholder="Timmer" required>
+                </div>
+              </div>
+            </div>
+            <div class="mt-5">
+              <label for="birthday[]" class="block text-sm font-medium text-gray-700">Geboortedatum</label>
+              <div>
+                <input type="month" value="2022-04" name="date_" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+              </div>
+            </div>
+            <div class="mt-5 divide-y divide-dashed">
+              <label for="price" class="block text-sm font-medium text-gray-700">Prijs</label>
+              <div id="price" class="font-semibold text-2xl mt-[8px] mb-8">
+                €10,-
+              </div>
+            </div>
           </div>
-        </div>
-        <div>
-          <label for="last-name" class="block text-sm font-medium text-gray-700">Achternaam</label>
-          <div class="mt-1">
-            <input type="text" name="last-name" id="last-name" autocomplete="family-name"
-              class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-              placeholder="Timmer" required>
-          </div>
-        </div>
-        {{-- <div>
-          <label for="birthday[]" class="block text-sm font-medium text-gray-700">Geboortedatum</label>
-          <div class="mt-1 sm:flex sm:justify-between">
-            <select name="birthday[]" id="birthday[]" class="bg-white py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md sm:mr-1">
-              <option>januari</option>
-              <option>februari</option>
-              <option>maart</option>
-              <option>april</option>
-              <option>mei</option>
-              <option>juni</option>
-              <option>juli</option>
-              <option>augustus</option>
-              <option>september</option>
-              <option>oktober</option>
-              <option>november</option>
-              <option>december</option>
-            </select>
-            <input name="birthday[]" id="birthday[]" type="text" placeholder="Jaartal" maxlength="4" class="bg-white py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md sm:ml-1 sm:mt-0 mt-4">
-          </div>
-        </div> --}}
-        <div>
-          <label for="birthday[]" class="block text-sm font-medium text-gray-700">Geboortedatum</label>
-          <div class="mt-1 sm:flex sm:justify-between">
-            <input type="month" value="2022-04">
-          </div>
-        </div>
-        <div>
-          <label for="price" class="block text-sm font-medium text-gray-700">Prijs</label>
-          <div id="price" class="font-semibold text-2xl mt-[8px]">
-            €10,-
-          </div>
-        </div>
+          <div id="container" class="sm:col-span-2"></div>
         <div class="flex items-center">
           <a href="#" class="">
-            <i class="fa-solid fa-plus hover:animate-spin"></i>
+            <i class="fa-solid fa-plus hover:animate-spin" id="ep"></i>
           </a>
           <span class="ml-2">Voeg persoon toe</span>
         </div>
@@ -137,7 +130,7 @@
                 <span class="slider round"></span>
               </label>
               <span class="sr-only">Accepteer de policies</span>
-              <!-- Enabled: "translate-x-5", Not Enabled: "translate-x-0" -->
+
             </div>
             <div class="ml-3">
               <p class="text-base text-gray-500">

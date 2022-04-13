@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Reservation;
 
 class Participant extends Model
 {
@@ -34,6 +35,10 @@ class Participant extends Model
     | RELATIONS
     |--------------------------------------------------------------------------
     */
+
+    public function participants(){
+        return $this->belongsTo(Reservation::class, 'reservation_id', 'id');
+    }
 
     /*
     |--------------------------------------------------------------------------

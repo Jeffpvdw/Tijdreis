@@ -14,12 +14,12 @@ $(document).ready(function(){
       $("#Themas").toggleClass("hidden");
       $("#MobileThemas").toggleClass("hidden");
     });
-  
+
     //opens/closes hamburger menu in mobile
     $('.MobileMenuButton').click(function(){
       $("#dropdown-content").toggleClass("hidden");
     });
-  
+
     //controls the editor for the HousekeepingHome.html table
     $('.ToggleEdit').click(function(){
       $("#popup").toggleClass("hidden");
@@ -28,8 +28,18 @@ $(document).ready(function(){
       $("#cancelbtn").toggleClass("hidden");
       $("#savebtn").toggleClass("hidden");
     });
-  
+
     $('#DeleteTrip').click(function(){
       $("#ConfirmTxt").toggleClass("hidden");
     })
+
+    // AddPerson
+    var cloneCount = 1;
+    $("#ep").click(function(e) {
+        e.preventDefault();
+        var element = $('#copy');
+        $("#container").append(element.html().replaceAll('_', '_'+ cloneCount++));
+    });
+
 });
+

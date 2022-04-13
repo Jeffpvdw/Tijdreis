@@ -19,10 +19,6 @@ return [
     // (left-to-right vs right-to-left)
     'html_direction' => 'ltr',
 
-    // ----
-    // HEAD
-    // ----
-
     // Project name. Shown in the window title.
     'project_name' => 'Tijdreis HvH',
 
@@ -73,6 +69,7 @@ return [
 
     // Menu logo. You can replace this with an <img> tag if you have a logo.
     'project_logo'   => '<b>Tijd</b>reis',
+
 
     // Show / hide breadcrumbs on admin panel pages.
     'breadcrumbs' => true,

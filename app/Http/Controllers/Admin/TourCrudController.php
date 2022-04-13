@@ -39,14 +39,25 @@ class TourCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('theme_id')->label('Thema');
-        CRUD::column('dateTime');
-        CRUD::column('capacity');
-        CRUD::column('start_location');
-        CRUD::column('price_adult');
-        CRUD::column('price_child');
-        CRUD::column('created_at');
-        CRUD::column('updated_at');
+
+        // CRUD::column('theme_id')->label('Thema');
+        // $this->crud->addColumn([
+        //     'label' => "Thema",
+        //     // 'type' => 'select',
+        //     'name' => 'theme_id', // the db column for the foreign key
+        //     'entity' => 'themes', // the method that defines the relationship in your Model
+        //     'attribute' => 'name', // foreign key attribute that is shown to user
+        //     'model' => "App\Models\Theme" // foreign key model
+        // ]);
+        CRUD::column('theme_id')->label('Thema')->type('select')->name('theme_id')->entity('themes')->attribute('name')->model('App\Models\Theme');
+        CRUD::column('dateTime')->label('Datum');
+        CRUD::column('capacity')->label('Max. Deelnemers');
+        CRUD::column('start_location')->label('Start locatie');
+        CRUD::column('price_adult')->label('Prijs Volwassenen');
+        CRUD::column('price_child')->label('Prijs Kinderen');
+        CRUD::column('created_at')->label('Gemaakt op');
+        CRUD::column('updated_at')->label('Veranderd op');
+
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -65,15 +76,21 @@ class TourCrudController extends CrudController
     {
         CRUD::setValidation(TourRequest::class);
 
-        CRUD::field('id');
-        CRUD::field('theme_id');
-        CRUD::field('dateTime');
-        CRUD::field('capacity');
-        CRUD::field('start_location');
-        CRUD::field('price_adult');
-        CRUD::field('price_child');
-        CRUD::field('created_at');
-        CRUD::field('updated_at');
+        $this->crud->addField([
+            'label' => "Thema",
+            'type' => 'select',
+            'name' => 'theme_id', // the db column for the foreign key
+            'entity' => 'themes', // the method that defines the relationship in your Model
+            'attribute' => 'name', // foreign key attribute that is shown to user
+            'model' => "App\Models\Theme" // foreign key model
+        ]);
+        // CRUD::field('theme_id')->label('Thema')->type('select')->name('theme_id')->entity('themes')->attribute('name')->model('App\Models\Theme');
+        CRUD::field('dateTime')->label('Datum en Tijd');
+        CRUD::field('capacity')->label('Max. Deelnemers');
+        CRUD::field('start_location')->label('Start locatie');
+        CRUD::field('price_adult')->label('Prijs Volwassenen');
+        CRUD::field('price_child')->label('Prijs Kind');
+
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:
@@ -91,5 +108,16 @@ class TourCrudController extends CrudController
     protected function setupUpdateOperation()
     {
         $this->setupCreateOperation();
+    }
+    protected function setupShowOperation()
+    {
+        CRUD::column('theme_id')->label('Thema')->type('select')->name('theme_id')->entity('themes')->attribute('name')->model('App\Models\Theme');
+        CRUD::column('dateTime')->label('Datum');
+        CRUD::column('capacity')->label('Max. Deelnemers');
+        CRUD::column('start_location')->label('Start locatie');
+        CRUD::column('price_adult')->label('Prijs Volwassenen');
+        CRUD::column('price_child')->label('Prijs Kinderen');
+        CRUD::column('created_at')->label('Gemaakt op');
+        CRUD::column('updated_at')->label('Veranderd op');
     }
 }
