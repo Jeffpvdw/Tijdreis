@@ -102,11 +102,6 @@
                 - Biogas
                 <br>
                 - Waterstof? </p>
-            <p class="mt-8 text-xl text-gray-500 leading-8">Op deze kaart staat de route van de Tijdreis weergegeven met daarbij de locaties die aan de orde komen
-                tijdens de rit of in het routeboekje.
-                De route kan ook als fietsroute gedownload worden. <a href="">(“klik hier”)</a> U kunt dan op eigen gelegenheid langs de
-                locaties fietsen. Het Veenmuseum kunt u bezoeken, maar op de andere locaties mist u dan de rondleidingen en
-                verdere achtergrondinformatie. </p>
         </div>
         <div class="block justify-center flex flex-wrap pb-4 mt-5">
             <img class="w-80 lg:ml-10 pb-4" src="images/factory.jpg" alt="" width="450" height="250">

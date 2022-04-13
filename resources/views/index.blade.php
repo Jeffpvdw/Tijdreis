@@ -70,9 +70,11 @@
                         <div class="mt-6">
                             <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">De reis</h2>
                             <p class="mt-4 text-lg text-gray-500">Er is een bekende en wijze uitspraak die zegt:</p>
-                            <blockquote class="mt-4 text-lg text-center text-gray-500">“Je moet het <u>verleden</u> kennen om het
+                            <blockquote class="mt-4 text-lg text-center text-gray-500">“Je moet het <u>verleden</u>
+                                kennen om het
                                 <u>heden</u> te begrijpen,
-                                en om er voor de <u>toekomst</u> van te leren”.</blockquote>
+                                en om er voor de <u>toekomst</u> van te leren”.
+                            </blockquote>
                             <p class="mt-4 text-lg text-gray-500">Dat wil de Historische Vereniging Hardenberg e.o. op
                                 een nieuwe manier in de praktijk
                                 brengen door middel van thematische Tijdreizen. Het zijn interessante excursies langs
@@ -89,7 +91,8 @@
                     </div>
                 </div>
                 <div class="mt-12 sm:mt-16 lg:mt-0">
-                    <div class="pl-4 -mr-14 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full pr-20 flex items-center">
+                    <div
+                        class="pl-4 -mr-14 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full pr-20 flex items-center">
                         <img
                             class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:w-auto lg:max-w-[38rem]"
                             src="/images/windmills.jpg" alt="Inbox user interface">
@@ -138,12 +141,22 @@
     <!-- Gradient Feature Section -->
     <div class="bg-gradient-to-b from-[#5b9e8c] to-[#3f5062]">
         <div class="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-14 sm:pb-24 lg:max-w-7xl lg:px-8">
-            <h2 class="text-3xl font-extrabold text-white tracking-tight text-center">Waar zijn we gevestigd?</h2>
+            <h2 class="text-3xl font-extrabold text-white tracking-tight text-center">De route van dit jaar</h2>
+            {{--            <iframe class="rounded-2xl w-full h-[28rem] mt-12"--}}
+            {{--                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2424.701203676492!2d6.614742915942823!3d52.57501453990292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4165204865453b6f%3A0x3dba0f1341eb84e5!2sHistorische%20Vereniging%20Hardenberg%20en%20Omgeving!5e0!3m2!1sen!2snl!4v1646654849392!5m2!1sen!2snl"--}}
+            {{--                    style="border:0;" allowfullscreen="" loading="lazy"></iframe>--}}
             <iframe class="rounded-2xl w-full h-[28rem] mt-12"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2424.701203676492!2d6.614742915942823!3d52.57501453990292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4165204865453b6f%3A0x3dba0f1341eb84e5!2sHistorische%20Vereniging%20Hardenberg%20en%20Omgeving!5e0!3m2!1sen!2snl!4v1646654849392!5m2!1sen!2snl"
-                    style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    src="https://www.google.com/maps/d/embed?mid=1LFynfpb0pELSxYt3IxIz3OyaV9otYTZq&ehbc=2E312F"
+                    width="640" height="480" width="640" height="480"></iframe>
+            <p class="text-lg text-white text-center mt-4">Op deze kaart staat de route van de Tijdreis weergegeven met
+                daarbij de locaties die aan de orde komen
+                tijdens de rit of in het routeboekje.<br><br>
+                De route kan ook als fietsroute gedownload worden.
+                <a href="" class="inline-flex bg-[#5b9e8c] bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:bg-opacity-70">klik hier</a> U kunt dan op eigen gelegenheid langs de
+                locaties fietsen. Het Veenmuseum kunt u bezoeken maar op de andere locaties mist u dan de rondleidingen
+                en
+                verdere achtergrondinformatie. </p>
         </div>
-
     </div>
 </main>
 </div>
