@@ -41,7 +41,7 @@ class Theme extends Model
 
 
     public function tours(){
-        return $this->belongsTo(Tour::class, 'theme_id');
+        return $this->hasMany(Tour::class);
     }
 
 

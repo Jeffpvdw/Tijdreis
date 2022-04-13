@@ -39,14 +39,13 @@ class ReservationCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('id');
-        CRUD::column('tour_id');
-        CRUD::column('email');
-        CRUD::column('phone');
-        CRUD::column('comment');
-
-        CRUD::column('created_at');
-        CRUD::column('updated_at');
+        CRUD::column('tour_id')->label('Tour')->type('select')->name('tour_id')->entity('reservations')->attribute('dateTime')->model('App\Models\Reservation');
+        // CRUD::column('tour_id')->label('Tour');
+        CRUD::column('email')->label('E-mail');
+        CRUD::column('phone')->label('Telefoonnummer');
+        CRUD::column('comment')->label('Commentaar');
+        CRUD::column('created_at')->label('Gemaakt op');
+        CRUD::column('updated_at')->label('Veranderd op');
 
 
 
@@ -67,14 +66,19 @@ class ReservationCrudController extends CrudController
     {
         CRUD::setValidation(ReservationRequest::class);
 
-        CRUD::field('id');
-        CRUD::field('tour_id');
-        CRUD::field('email');
-        CRUD::field('phone');
-        CRUD::field('comment');
-
-        CRUD::field('created_at');
-        CRUD::field('updated_at');
+        $this->crud->addField([
+            'label' => "Tour0",
+            'type' => 'select',
+            'name' => 'tour_id', // the db column for the foreign key
+            'entity' => 'reservations', // the method that defines the relationship in your Model
+            'attribute' => 'dateTime', // foreign key attribute that is shown to user
+            'model' => "App\Models\Tour" // foreign key model
+        ]);
+        // CRUD::field('tour_id')->label('Tour')->type('select')->name('tour_id')->entity('reservations')->attribute('dateTime')->model('App\Models\Tour');
+        // CRUD::field('tour_id')->label('Tour');
+        CRUD::field('email')->label('E-mail');
+        CRUD::field('phone')->label('Telefoonnummer');
+        CRUD::field('comment')->label('Commentaar');
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

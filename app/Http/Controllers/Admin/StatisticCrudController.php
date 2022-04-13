@@ -28,7 +28,7 @@ class StatisticCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\Statistic::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/statistic');
-        CRUD::setEntityNameStrings('Statestiek', 'Statestieken');
+        CRUD::setEntityNameStrings('Statistiek', 'Statistieken');
     }
 
     /**
