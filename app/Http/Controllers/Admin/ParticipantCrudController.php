@@ -39,6 +39,8 @@ class ParticipantCrudController extends CrudController
      */
     protected function setupListOperation()
     {
+        CRUD::column('reservation_id')->label('Reserverings Houder')->type('select')->name('reservation_id')->entity('participants')->attribute('email')->model('App\Models\Participant');
+        // CRUD::column('reservation_id')->label('Reserverings Houder');
         CRUD::column('firstname')->label('Voornaam');
         CRUD::column('preposition')->label('Tussenvoegsel');
         CRUD::column('lastname')->label('Achternaam');
@@ -62,13 +64,18 @@ class ParticipantCrudController extends CrudController
     {
         CRUD::setValidation(ParticipantRequest::class);
 
-        CRUD::field('id');
-        CRUD::field('reservation_id');
-        CRUD::field('firstname');
-        CRUD::field('preposition');
-        CRUD::field('lastname');
-        CRUD::field('created_at');
-        CRUD::field('updated_at');
+        $this->crud->addField([
+            'label' => "Reserverings Houders",
+            'type' => 'select',
+            'name' => 'reservation_id', // the db column for the foreign key
+            'entity' => 'participants', // the method that defines the relationship in your Model
+            'attribute' => 'email', // foreign key attribute that is shown to user
+            'model' => "App\Models\Reservation" // foreign key model
+        ]);
+        // CRUD::field('reservation_id')->label('Reserverings Houder')->type('select')->name('reservation_id')->entity('participants')->attribute('email')->model('App\Models\Reservation');
+        CRUD::field('firstname')->label('Voornaam');
+        CRUD::field('preposition')->label('Tussenvoegsel');
+        CRUD::field('lastname')->label('Achternaam');
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:
