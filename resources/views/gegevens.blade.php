@@ -6,7 +6,7 @@
         use App\Http\Controllers\OrderController; @endphp
 
 
-<main style="min-height: calc(100vh - 600px);" class="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
+<main class="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
   <div class="relative max-w-[45rem] mx-auto">
     <svg class="absolute left-full transform translate-x-1/2" width="404" height="404" fill="none"
       viewBox="0 0 404 404" aria-hidden="true">
@@ -73,7 +73,7 @@
               <div>
                 <label for="first-name" class="block text-sm font-medium text-gray-700">Voornaam</label>
                 <div class="mt-1">
-                  <input type="text" name="firstName[]" id="firstName[]" autocomplete="given-name"
+                  <input type="text" name="first-name_" id="first-name_" autocomplete="given-name"
                     class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                     placeholder="Jan" required>
                 </div>
@@ -81,7 +81,7 @@
               <div class="mt-5 sm:mt-0">
                 <label for="proposition" class="block text-sm font-medium text-gray-700">Tussenvoegsel</label>
                 <div class="mt-1">
-                  <input type="text" name="proposition[]" id="proposition[]" autocomplete="proposition"
+                  <input type="text" name="proposition_" id="proposition_" autocomplete="proposition"
                     class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                     placeholder="Van">
                 </div>
@@ -89,7 +89,7 @@
               <div class="mt-5 sm:mt-0">
                 <label for="last-name" class="block text-sm font-medium text-gray-700">Achternaam</label>
                 <div class="mt-1">
-                  <input type="text" name="lastName[]" id="lastName[]" autocomplete="family-name"
+                  <input type="text" name="last-name_" id="last-name_" autocomplete="family-name"
                     class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                     placeholder="Timmer" required>
                 </div>
@@ -98,14 +98,13 @@
             <div class="mt-5">
               <label for="birthday[]" class="block text-sm font-medium text-gray-700">Geboortedatum</label>
               <div>
-                <input type="month" value="2022-04" name="date[]" id="date[]" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+                <input type="month" value="2022-04" name="date_" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
               </div>
             </div>
             <div class="mt-5 divide-y divide-dashed">
               <label for="price" class="block text-sm font-medium text-gray-700">Prijs</label>
-              <div  class="font-semibold text-2xl mt-[8px] mb-8">
-                <p id="price[]"> €10,-</p>
-                  <input type="hidden" name="prijs[]" value="10">
+              <div id="price" class="font-semibold text-2xl mt-[8px] mb-8">
+                €10,-
               </div>
             </div>
           </div>
@@ -119,7 +118,7 @@
         <div class="sm:col-span-2">
           <label for="message" class="block text-sm font-medium text-gray-700">Bericht</label>
           <div class="flex items-start">
-            <textarea name="message" id="message" placeholder="Gebruikt u een wandelstok of rolator, heeft u alergiën of wilt u iets anders melden? Kunt u het hier opschrijven." class="h-40 bg-white py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"></textarea>
+            <textarea name="message" id="message" placeholder="Gebruikt u een wandelstok of rolator, heeft u alergiën of wilt u iets anders melden? Kunt u het hier opschrijven." class="bg-white py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"></textarea>
           </div>
         </div>
         <div class="sm:col-span-2">
@@ -135,7 +134,7 @@
             </div>
             <div class="ml-3">
               <p class="text-base text-gray-500">
-                Als u dit selecteert accepteert u de
+                Als je dit selecteert accepteer je de
                 <a href="images/Algemene-voorwaarden.pdf" class="font-medium text-gray-700 underline">Algemene voorwaarden.</a>
               </p>
             </div>
