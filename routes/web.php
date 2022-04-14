@@ -69,6 +69,10 @@ Route::get('/housekeeping/home', function () {
     return view('housekeepinghome');
 });
 
+Route::get('/statistics', function () {
+    return view('statistics');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
