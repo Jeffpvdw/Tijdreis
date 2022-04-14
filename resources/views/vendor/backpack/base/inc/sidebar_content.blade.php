@@ -5,3 +5,4 @@
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('participant') }}'><i class='nav-icon las la-users'></i> Deelnemers</a></li>
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('statistic') }}'><i class='nav-icon lar la-chart-bar'></i> Statistieken</a></li>
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('theme') }}'><i class='nav-icon las la-atlas'></i> Thema's</a></li>
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('print') }}'><i class='nav-icon las la-atlas'></i> Printlijst</a></li>
