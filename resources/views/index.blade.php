@@ -25,10 +25,10 @@
                     </p>
                     <div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
                         <div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-                            <a href="/bestel"
+                            <a href="/thema"
                                class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-grey-500 bg-white hover:bg-indigo-50 sm:px-8 italic">
                                 Lees verder... </a>
-                            <a href="/thema"
+                            <a href="/bestel"
                                class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#5b9e8c] hover:bg-opacity-70 sm:px-8 italic">
                                 ...of boek direct een tijdreis </a>
                         </div>
@@ -68,7 +68,7 @@
               </span>
                         </div>
                         <div class="mt-6">
-                            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">De reis</h2>
+                            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">De tour</h2>
                             <p class="mt-4 text-lg text-gray-500">Er is een bekende en wijze uitspraak die zegt:</p>
                             <blockquote class="mt-4 text-lg text-center text-gray-500">“Je moet het <u>verleden</u>
                                 kennen om het
@@ -85,7 +85,7 @@
                             <div class="mt-6">
                                 <a href="/tour"
                                    class="inline-flex bg-gradient-to-r bg-[#5b9e8c] to-indigo-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:bg-opacity-70">
-                                    Lees meer </a>
+                                    Lees verder... </a>
                             </div>
                         </div>
                     </div>
@@ -175,10 +175,10 @@
     <div
         class="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
         <div class="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
-            <p class="mt-3 text-3xl font-extrabold text-white">Het thema dit jaar :<br/> Energie</p>
+            <p class="mt-3 text-3xl font-extrabold text-white">Het thema dit jaar:<br/> Energie</p>
             <p class="mt-5 text-lg text-gray-300">Dit jaar gaan we het hebben over het thema energie. Wat bedoelen we
-                hiermee? Denk bijvoorbeeld aan vroeger toen mensen veen en turf aan het verbranden waren
-                , of hoe we nu zonnepanelen installeren omdat we schonere alternatieven.</p>
+                hiermee? Denk bijvoorbeeld aan vroeger toen mensen veen en turf aan het verbranden waren,
+                of hoe we nu zonnepanelen installeren omdat we schonere alternatieven willen.</p>
         </div>
     </div>
 </div>

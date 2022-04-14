@@ -134,7 +134,7 @@
             </div>
             <div class="ml-3">
               <p class="text-base text-gray-500">
-                Als je dit selecteert accepteer je de
+                Als u dit selecteert accepteert u de
                 <a href="images/Algemene-voorwaarden.pdf" class="font-medium text-gray-700 underline">Algemene voorwaarden.</a>
               </p>
             </div>
