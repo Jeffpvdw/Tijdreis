@@ -32,10 +32,19 @@
           </form>
           <!-- Product details -->
           <div class="mt-10">
-            <h2 class="text-sm font-medium text-gray-900">Beschrijving</h2>
-            <p>s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-              standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book.</p>
+              <p class="mt-4 text-lg text-gray-500">Er is een bekende en wijze uitspraak die zegt:</p>
+              <blockquote class="mt-4 text-lg text-center text-gray-500">“Je moet het <u>verleden</u>
+                  kennen om het
+                  <u>heden</u> te begrijpen,
+                  en om er voor de <u>toekomst</u> van te leren”.
+              </blockquote>
+              <p class="mt-4 text-lg text-gray-500">Dat wil de Historische Vereniging Hardenberg e.o. op
+                  een nieuwe manier in de praktijk
+                  brengen door middel van thematische Tijdreizen. Het zijn interessante excursies langs
+                  bijzondere locaties met daarbij geschiedkundige informatie en mooie verhalen. Hierdoor
+                  krijgt een deelnemer een goed beeld van de geschiedenis rond het betreffende thema. En
+                  waar mogelijk wordt er ook vooruit gekeken in de tijd: Wat doen we met de ervaringen uit
+                  het verleden? </p>
           </div>
           </section>
         </div>
