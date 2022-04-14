@@ -2,7 +2,7 @@
 
 @include('layouts.header')
 
-<div class="relative py-16 bg-white overflow-hidden">
+<div style="min-height: calc(100vh - 600px);" class="relative py-16 bg-white overflow-hidden">
     <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
         <div class="relative h-full text-lg max-w-prose mx-auto" aria-hidden="true">
             <svg class="absolute top-12 left-full transform translate-x-32" width="404" height="384" fill="none"
@@ -54,6 +54,7 @@
                 ontwikkelingen zijn bepalend geweest voor de opbouw en structuur van de omgeving van Hardenberg, dus zeg
                 maar hoe het gebied er nu nog steeds uit ziet.
                 <br>
+                <img class="w-80 lg:ml-10 pb-4 float-right" src="images/factory.jpg" alt="" width="450" height="250">
                 <br>
                 Ook kwam er een stroom van arbeiders naar deze regio op gang en ontstonden de eerste dorpen. Op de
                 afgegraven gronden werden landbouwbedrijven gesticht. Landbouwers uit verschillende delen van Nederland
@@ -65,10 +66,12 @@
                 niet meer de moeite loonde om het laatste stukje bij Sibculo-Westerhaar af te graven. Om die reden
                 hebben we hier nu nog wel een heel mooi en waardevol natuurgebied!
                 <br>
+                <img class="w-80 mt-6 mr-6 pb-4 float-left" src="images/solar3.jpg" alt="" width="450" height="250">
                 <br>
                 Kolen werden in steden al veel langer als energiebron gebruikt werd. Ook in Hardenberg waren er enkele
                 kolenboeren die de burgers van deze brandstof konden voorzien.
                 <br>
+
                 <br>
                 Begin 60-er jaren van de 21e eeuw werd het aardgas in de provincie Groningen ontdekt. Nederland
                 schakelde massaal over op deze nieuwe, schone en vooral goedkope brandstof. Voor deze regio had die
@@ -78,6 +81,7 @@
                 opnieuw druk op de transportleiding te zetten om het gas verder te laten stromen. Dat pompstation staat
                 in Vilsteren.
                 <br>
+                <img class="w-80 mt-10 pb-4 float-right" src="images/nuclear.jpg" alt="" width="450" height="250">
                 <br>
                 <b>Andere onderwerpen</b>
                 <br>
@@ -104,9 +108,8 @@
                 - Waterstof? </p>
         </div>
         <div class="block justify-center flex flex-wrap pb-4 mt-5">
-            <img class="w-80 lg:ml-10 pb-4" src="images/factory.jpg" alt="" width="450" height="250">
-            <img class="w-80 lg:ml-10 pb-4" src="images/solar3.jpg" alt="" width="450" height="250">
-            <img class="w-80 lg:ml-10 pb-4" src="images/nuclear.jpg" alt="" width="450" height="250">
+
+
         </div>
     </div>
 </div>

@@ -18,7 +18,7 @@ class CreateReservationsTable extends Migration
             $table->unsignedBigInteger('tour_id')->nullable();
             $table->string('email', 64);
             $table->string('phone');
-            $table->text('comment');
+            $table->text('comment')->nullable();
             $table->timestamps();
 
             $table->foreign('tour_id')->references('id')->on('tours');

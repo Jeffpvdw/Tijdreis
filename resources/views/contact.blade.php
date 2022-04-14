@@ -2,7 +2,7 @@
 
 @include('layouts.header')
 
-<main>
+<main style="min-height: calc(100vh - 600px);">
   <div class="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
     <div class="relative max-w-xl mx-auto">
       <svg class="absolute left-full transform translate-x-1/2" width="404" height="404" fill="none" viewBox="0 0 404 404" aria-hidden="true">
@@ -23,7 +23,7 @@
       </svg>
       <div class="text-center">
         <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Neem contact op met ons!</h2>
-        <p class="mt-4 text-lg leading-6 text-gray-500">Voor al uw vragen over Historische vereniging Hardenberg kunt uw ons zowel per mail, als telefonisch bereiken.</p>
+        <p class="mt-4 text-lg leading-6 text-gray-500">Voor al uw vragen over Historische vereniging Hardenberg kunt uw ons zowel per mail als telefonisch bereiken.</p>
       </div>
       <div class="mt-12">
         <form action="#" method="POST" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">

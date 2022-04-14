@@ -2,7 +2,7 @@
 
 @include('layouts.header')
 
-<main class="bg-white">
+<main style="min-height: calc(100vh - 600px);" class="bg-white">
   <div class="pt-6 pb-16 sm:pb-24">
     <div class="mt-8 max-w-2xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
       <div class="lg:grid lg:grid-cols-12 lg:auto-rows-min lg:gap-x-8">
@@ -27,15 +27,24 @@
             <!-- Size picker -->
             <div class="mt-8">
               <a href="/gegevens" type="submit"
-                class="mt-8 w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white bg-[#5b9e8c] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Ga
+                class="mt-8 text-center w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white bg-[#5b9e8c] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Ga
                 verder naar persoongegevens</a>
           </form>
           <!-- Product details -->
           <div class="mt-10">
-            <h2 class="text-sm font-medium text-gray-900">Beschrijving</h2>
-            <p>s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-              standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book.</p>
+              <p class="mt-4 text-lg text-gray-500">Er is een bekende en wijze uitspraak die zegt:</p>
+              <blockquote class="mt-4 text-lg text-center text-gray-500">“Je moet het <u>verleden</u>
+                  kennen om het
+                  <u>heden</u> te begrijpen,
+                  en om er voor de <u>toekomst</u> van te leren”.
+              </blockquote>
+              <p class="mt-4 text-lg text-gray-500">Dat wil de Historische Vereniging Hardenberg e.o. op
+                  een nieuwe manier in de praktijk
+                  brengen door middel van thematische Tijdreizen. Het zijn interessante excursies langs
+                  bijzondere locaties met daarbij geschiedkundige informatie en mooie verhalen. Hierdoor
+                  krijgt een deelnemer een goed beeld van de geschiedenis rond het betreffende thema. En
+                  waar mogelijk wordt er ook vooruit gekeken in de tijd: Wat doen we met de ervaringen uit
+                  het verleden? </p>
           </div>
           </section>
         </div>
