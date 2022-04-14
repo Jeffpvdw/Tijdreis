@@ -2,7 +2,7 @@
 
 @include('layouts.header')
 
-<div class="relative py-16 bg-white overflow-hidden">
+<div style="min-height: calc(100vh - 600px);" class="relative py-16 bg-white overflow-hidden">
     <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
         <div class="relative h-full text-lg max-w-prose mx-auto" aria-hidden="true">
             <svg class="absolute top-12 left-full transform translate-x-32" width="404" height="384" fill="none"

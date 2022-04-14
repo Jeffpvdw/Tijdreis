@@ -6,7 +6,7 @@
         use App\Http\Controllers\OrderController; @endphp
 
 
-<main class="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
+<main style="min-height: calc(100vh - 600px);" class="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
   <div class="relative max-w-[45rem] mx-auto">
     <svg class="absolute left-full transform translate-x-1/2" width="404" height="404" fill="none"
       viewBox="0 0 404 404" aria-hidden="true">
@@ -118,7 +118,7 @@
         <div class="sm:col-span-2">
           <label for="message" class="block text-sm font-medium text-gray-700">Bericht</label>
           <div class="flex items-start">
-            <textarea name="message" id="message" placeholder="Gebruikt u een wandelstok of rolator, heeft u alergiën of wilt u iets anders melden? Kunt u het hier opschrijven." class="bg-white py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"></textarea>
+            <textarea name="message" id="message" placeholder="Gebruikt u een wandelstok of rolator, heeft u alergiën of wilt u iets anders melden? Kunt u het hier opschrijven." class="h-40 bg-white py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"></textarea>
           </div>
         </div>
         <div class="sm:col-span-2">

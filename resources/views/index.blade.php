@@ -14,7 +14,7 @@
                 </div>
                 <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                     <h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                        <span class="text-6xl block text-white">Welkom bij Tijdreis-Hardenberg!</span>
+                        <span class="text-4xl md:text-6xl block text-white">Welkom bij Tijdreis-Hardenberg!</span>
                     </h1>
                     <p class="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">
                         Hier is het vertrekpunt voor een afwisselende reis door de tijd. Jong en oud gaan op stap door
@@ -173,7 +173,7 @@
         </div>
     </div>
     <div
-        class="max-w-4xl mx-auto ml-24 px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
+        class="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
         <div class="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
             <p class="mt-3 text-3xl font-extrabold text-white">Het thema dit jaar :<br/> Energie</p>
             <p class="mt-5 text-lg text-gray-300">Dit jaar gaan we het hebben over het thema energie. Wat bedoelen we

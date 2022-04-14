@@ -2,7 +2,7 @@
 
 @include('layouts.header')
 
-<main class="bg-white">
+<main style="min-height: calc(100vh - 600px);" class="bg-white">
   <div class="pt-6 pb-16 sm:pb-24">
     <div class="mt-8 max-w-2xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
       <div class="lg:grid lg:grid-cols-12 lg:auto-rows-min lg:gap-x-8">
@@ -27,7 +27,7 @@
             <!-- Size picker -->
             <div class="mt-8">
               <a href="/gegevens" type="submit"
-                class="mt-8 w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white bg-[#5b9e8c] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Ga
+                class="mt-8 text-center w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white bg-[#5b9e8c] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Ga
                 verder naar persoongegevens</a>
           </form>
           <!-- Product details -->
