@@ -5,6 +5,7 @@ namespace App\Models;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Reservation;
+use App\Models\Statistic;
 
 class Participant extends Model
 {
@@ -38,6 +39,9 @@ class Participant extends Model
 
     public function participants(){
         return $this->belongsTo(Reservation::class, 'reservation_id', 'id');
+    }
+    public function statisticsName(){
+        return $this->hasMany(Statistic::class);
     }
 
     /*

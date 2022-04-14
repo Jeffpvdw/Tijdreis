@@ -39,6 +39,8 @@ class StatisticCrudController extends CrudController
      */
     protected function setupListOperation()
     {
+        CRUD::column('participant_id')->label('Voornaam Deelnemer')->type('select')->name('participant_id')->entity('statisticsName')->attribute('firstname')->model('App\Models\Participant');
+        CRUD::column('tour_id')->label('Tour')->type('select')->name('tour_id')->entity('tourDate')->attribute('dateTime')->model('App\Models\Tour');
         CRUD::column('zipcode')->label('Postcode');
         CRUD::column('birthdate')->label('Geboortedatum');
         CRUD::column('created_at')->label('Gemaakt op');
@@ -61,13 +63,30 @@ class StatisticCrudController extends CrudController
     {
         CRUD::setValidation(StatisticRequest::class);
 
-        CRUD::field('id');
-        CRUD::field('participant_id');
-        CRUD::field('tour_id');
-        CRUD::field('zipcode');
-        CRUD::field('birthdate');
-        CRUD::field('created_at');
-        CRUD::field('updated_at');
+        // CRUD::field('participant_id');
+        // $this->crud->addField([
+        //     'label' => "Voornaam Deelnemer",
+        //     'type' => 'select',
+        //     'name' => 'participant_id', // the db column for the foreign key
+        //     'entity' => 'statisticsName', // the method that defines the relationship in your Model
+        //     'attribute' => 'firstname', // foreign key attribute that is shown to user
+        //     'model' => "App\Models\Participant" // foreign key model
+        // ]);
+        $this->crud->addField([
+            'label' => "Persoon",
+            'type' => 'hidden',
+            'name' => 'id', // the db column for the foreign key
+        ]);
+        $this->crud->addField([
+            'label' => "Tour",
+            'type' => 'select',
+            'name' => 'tour_id', // the db column for the foreign key
+            'entity' => 'tourDate', // the method that defines the relationship in your Model
+            'attribute' => 'dateTime', // foreign key attribute that is shown to user
+            'model' => "App\Models\Tour" // foreign key model
+        ]);
+        CRUD::field('zipcode')->label('Postcode');
+        CRUD::field('birthdate')->label('Geboortedatum');
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

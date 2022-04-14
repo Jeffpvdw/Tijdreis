@@ -6,6 +6,7 @@ use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Theme;
 use App\Models\Reservation;
+use App\Models\Statistic;
 
 
 class Tour extends Model
@@ -47,7 +48,9 @@ class Tour extends Model
         return $this->hasMany(Reservation::class);
     }
 
-
+    public function tourDate(){
+        return $this->hasMany(Statistic::class);
+    }
     /*
     |--------------------------------------------------------------------------
     | SCOPES

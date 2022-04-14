@@ -39,7 +39,7 @@ class ReservationCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('tour_id')->label('Tour')->type('select')->name('tour_id')->entity('reservations')->attribute('dateTime')->model('App\Models\Reservation');
+        CRUD::column('tour_id')->label('Tour datum')->type('select')->name('tour_id')->entity('reservations')->attribute('dateTime')->model('App\Models\Reservation');
         // CRUD::column('tour_id')->label('Tour');
         CRUD::column('email')->label('E-mail');
         CRUD::column('phone')->label('Telefoonnummer');
@@ -67,7 +67,7 @@ class ReservationCrudController extends CrudController
         CRUD::setValidation(ReservationRequest::class);
 
         $this->crud->addField([
-            'label' => "Tour",
+            'label' => "Tour datum",
             'type' => 'select',
             'name' => 'tour_id', // the db column for the foreign key
             'entity' => 'reservations', // the method that defines the relationship in your Model
@@ -99,7 +99,7 @@ class ReservationCrudController extends CrudController
     }
     protected function setupShowOperation()
     {
-        CRUD::column('tour_id')->label('Tour')->type('select')->name('tour_id')->entity('reservations')->attribute('dateTime')->model('App\Models\Reservation');
+        CRUD::column('tour_id')->label('Tour datum')->type('select')->name('tour_id')->entity('reservations')->attribute('dateTime')->model('App\Models\Reservation');
         // CRUD::column('tour_id')->label('Tour');
         CRUD::column('email')->label('E-mail');
         CRUD::column('phone')->label('Telefoonnummer');
