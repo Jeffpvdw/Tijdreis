@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PrintListController;
 
 // --------------------------
 // Custom Backpack Routes
@@ -25,6 +26,9 @@ Route::group([
     Route::get('/print', function () {
         return view ('print');
     });
+    
+    Route::get("print", [PrintListController::class,'emptyCheck']);
+
     Route::crud('theme', 'ThemeCrudController');
     Route::crud('reservation', 'ReservationCrudController');
 

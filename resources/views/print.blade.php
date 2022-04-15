@@ -7,15 +7,10 @@
     <title>printlijst</title>
 </head>
 <body>
-    hoi
-    <form action="" method="post">
-        <input type="text" name="tour_id" id="tour_id" placeholder="tour_id">
-        <input type="button" value="submit">
+    <form action="print" method="GET">
+        <input type="text" name="tour_id" id="tour_id" placeholder="Vul een tour ID in">
+        <input type="submit" id="submit">
+        {{csrf_field()}}
     </form>
 </body>
-
-<script>
-
-
-</script>
 </html>
