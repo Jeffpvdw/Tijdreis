@@ -27,7 +27,7 @@
             <!-- Size picker -->
             <div class="mt-8">
               <a href="/gegevens" type="submit"
-                class="mt-8 w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white bg-[#5b9e8c] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Ga
+                class="text-center mt-8 w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white bg-[#5b9e8c] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Ga
                 verder naar persoongegevens</a>
           </form>
           <!-- Product details -->
