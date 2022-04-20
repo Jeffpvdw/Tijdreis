@@ -81,7 +81,7 @@
               <div class="mt-5 sm:mt-0">
                 <label for="proposition" class="block text-sm font-medium text-gray-700">Tussenvoegsel</label>
                 <div class="mt-1">
-                <input type="text" name="proposition[]" id="proposition[]" autocomplete="proposition"
+                  <input type="text" name="proposition_" id="proposition_" autocomplete="proposition"
                     class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                     placeholder="Van">
                 </div>
@@ -98,22 +98,13 @@
             <div class="mt-5">
               <label for="birthday[]" class="block text-sm font-medium text-gray-700">Geboortedatum</label>
               <div>
-
                 <input type="month" value="2022-04" name="date_" id="date_" class="date py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
-
-             
-
               </div>
             </div>
             <div class="mt-5 divide-y divide-dashed">
               <label for="price" class="block text-sm font-medium text-gray-700">Prijs</label>
-
               <div id="price" class="font-semibold text-2xl mt-[8px] mb-8">
-
-              <div  class="font-semibold text-2xl mt-[8px] mb-8">
-                <p id="price[]"> €10,-</p>
-                  <input type="hidden" name="prijs[]" value="10">
-
+                  <p id="price_">€10,-</p>
               </div>
             </div>
           </div>
