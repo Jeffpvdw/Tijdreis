@@ -23,9 +23,6 @@ Route::group([
     Route::crud('participant', 'ParticipantCrudController');
     Route::crud('statistic', 'StatisticCrudController');
     Route::crud('theme', 'ThemeCrudController');
-    Route::get('/print', function () {
-        return view ('print');
-    });
     
     Route::get("print", [PrintListController::class,'emptyCheck']);
 

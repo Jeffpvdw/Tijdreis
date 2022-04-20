@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Mail\ConfirmOrder;
 use App\Mail\ContactForm;
 use App\Http\Controllers\OrderController;
-use Illuminate\Support\Facades\Mail;
+use App\Http\Controllers\PrintListController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
