@@ -98,13 +98,13 @@
             <div class="mt-5">
               <label for="birthday[]" class="block text-sm font-medium text-gray-700">Geboortedatum</label>
               <div>
-                <input type="month" value="2022-04" name="date_" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+                <input type="month" value="2022-04" name="date_" id="date_" class="date py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
               </div>
             </div>
             <div class="mt-5 divide-y divide-dashed">
               <label for="price" class="block text-sm font-medium text-gray-700">Prijs</label>
               <div id="price" class="font-semibold text-2xl mt-[8px] mb-8">
-                €10,-
+                  <p id="price_">€10,-</p>
               </div>
             </div>
           </div>
