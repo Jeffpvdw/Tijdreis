@@ -43,13 +43,13 @@
           <div class="sm:col-span-2">
             <label for="company" class="block text-sm font-medium text-gray-700">Email</label>
             <div class="mt-1">
-              <input type="email" name="email" id="company" autocomplete="organization" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Jantimmer@gmail.com" required>
+              <input type="email" name="email" id="company" autocomplete="organization" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Jantimmer@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Voer een geldig emailadres in" required>
             </div>
           </div>
           <div class="sm:col-span-2">
             <label for="company" class="block text-sm font-medium text-gray-700">Telefoonnummer</label>
             <div class="mt-1">
-              <input type="text" name="phone" id="company" autocomplete="organization" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="0612345678">
+              <input type="text" name="phone" id="company" autocomplete="organization" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" maxlength="10" minlength="10" pattern="[0-9]+" placeholder="0612345678">
             </div>
           </div>
           <div class="sm:col-span-2">
