@@ -1,11 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Mail;
 use App\Mail\ConfirmOrder;
 use App\Mail\ContactForm;
 use App\Http\Controllers\OrderController;
-
+use Illuminate\Support\Facades\Mail;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -76,6 +75,9 @@ Route::get('/statistics', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+Route::get('/mollie', [\App\Http\Controllers\PaymentController::class, 'testPayment']);
+Route::get('/failedpayment', [\App\Http\Controllers\PaymentController::class, 'FailedPayment']);
 
 require __DIR__.'/auth.php';
 
