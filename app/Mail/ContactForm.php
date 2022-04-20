@@ -32,7 +32,9 @@ class ContactForm extends Mailable
     public function build()
     {
         return $this->from("website@tijdrijs-hardenberg.nl", "contact Formulier Tijdreis Hardenberg")
-                    ->subject($this->data['subject'])
+                    ->subject("Nieuw contactformulier")
+                    ->replyTo($this->data['email'])
+                    ->cc([$this->data['email']])
                     ->view('contactFormMail')
                     ->with(['data' => $this->data]);
     }

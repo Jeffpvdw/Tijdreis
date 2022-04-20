@@ -12,12 +12,14 @@ class ConfirmOrderController
     {
         $data = [
             'email' => $request->email,
-            'name' => $request->lastname,
-            'date' => $request->date,
-            'location' => $request->location
+            'firstname' => $request->firstName_,
+            'lastname' => $request->lastName_,
+            'tour' => $request->tour,
+            'price' => $request->totalPrice
         ];
 
         Mail::to("info@hvhardenberg.nl")->send(new ConfirmOrder($data));
+        return view("contactsend");
     }
 
 }

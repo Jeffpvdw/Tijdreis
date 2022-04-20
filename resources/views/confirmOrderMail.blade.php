@@ -12,7 +12,7 @@
             <table style="background-color: white; max-width: 550px;">
                 <tr>
                     <td style="text-align: center; font-size: 15px; padding-top: 15px;">
-                        <b>Geachte heer/mevrouw, <span id="LastName"> {{ $data['name'] }} </span></b>
+                        <b>Geachte heer/mevrouw, <span id="LastName"> {{ $data['lastname'] }} </span></b>
                     </td>
                 </tr>
                 <tr>
@@ -27,16 +27,18 @@
                 </tr>
                 <tr>
                     <td style="text-align: center;">
-                        <p>Datum en Tijd:</p>
-                        <p>{{ $data['date'] }}</p>
+                        <h3>Datum, tijd en locatie:</h4>
+                        <p>{{ $data['tour'] }}</p>
                     </td>
                 </tr>
+
                 <tr>
                     <td style="text-align: center;">
-                        <p>Locatie:</p>
-                        <p>{{ $data['location'] }}</p>
+                        <h3>Totaalprijs:</h4>
+                        <p>{{ $data['price'] }}</p>
                     </td>
                 </tr>
+
                 <tr>
                     <td style="text-align: center;">
                         <p> Als u ons verder wil ondersteunen kunt u

@@ -12,12 +12,14 @@ class ContactController
     {
         $data = [
             'email' => $request->email,
-            'name' => $request->name,
-            'subject' => $request->subject,
+            'firstname' => $request->firstname,
+            'lastname' => $request->lastname,
+            'phone' => $request->phone,
             'msg' => $request->msg
         ];
 
         Mail::to("info@hvhardenberg.nl")->send(new ContactForm($data));
+        return view("contactsend");
     }
 
 }

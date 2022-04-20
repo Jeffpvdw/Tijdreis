@@ -9,31 +9,45 @@
 <table style=" background-color: white; width: 100%; height: 100%; border: 3px rgba(192,192,192, 0.2) groove; padding: 20px;">
     <tr>
         <td style="text-align: center; font-size: 15px; padding-top: 15px;">
-            <!--Naam var's--> {{ $data['name'] }}
+            <h1>Nieuw mail vanuit contactformulier</h1>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="text-align: center; font-size: 15px; padding-top: 15px;">
+            <h3>Naam:</h3>
+            <!--Naam var's--> {{ $data['firstname'] }} {{ $data['lastname'] }}
         </td>
     </tr>
 
     <tr>
         <td style="text-align: center;">
+            <h3>Email adres:</h3>
             {{ $data['email'] }}
         </td>
     <tr>
 
     <tr>
         <td style="text-align: center;">
-            {{ $data['subject'] }}
+            <h3>Telefoonnummer:</h3>
+            {{ $data['phone'] }}
         </td>
     <tr>
 
     <tr>
         <td style="text-align: center;">
+            <h3>Bericht:</h3>
             {{ $data['msg'] }}
         </td>
     </tr>
 
+    <tr><td>&nbsp;</td></tr>
+    <tr><td>&nbsp;</td></tr>
+    <tr><td>&nbsp;</td></tr>
+
     <tr>
         <td style="text-align: center;">
-            <p>This mail has been sent from a contact form on your website.</p>
+            <p><em>Dit is verstuurd vanuit een contactformulier op de website van Tijdreis Hardenberg.</p>
         </td>
     </tr>
 </table>

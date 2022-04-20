@@ -32,8 +32,8 @@
       <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Persoonlijke gegevens</h2>
     </div>
     <div class="mt-12">
-      <form action="/gegevens" method="post" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
-
+      <form action="{{ route('confirmOrder') }}" method="post" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+        @csrf
         <div class="sm:col-span-2">
           <label for="company" class="block text-sm font-medium text-gray-700">Datum selecteren tour</label>
           <div class="sm:flex sm:justify-between">
@@ -73,7 +73,7 @@
               <div>
                 <label for="first-name" class="block text-sm font-medium text-gray-700">Voornaam</label>
                 <div class="mt-1">
-                  <input type="text" name="first-name_" id="first-name_" autocomplete="given-name"
+                  <input type="text" name="firstName_" id="first-name_" autocomplete="given-name"
                     class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                     placeholder="Jan" required>
                 </div>
@@ -89,7 +89,7 @@
               <div class="mt-5 sm:mt-0">
                 <label for="last-name" class="block text-sm font-medium text-gray-700">Achternaam</label>
                 <div class="mt-1">
-                  <input type="text" name="last-name_" id="last-name_" autocomplete="family-name"
+                  <input type="text" name="lastName_" id="last-name_" autocomplete="family-name"
                     class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                     placeholder="Timmer" required>
                 </div>

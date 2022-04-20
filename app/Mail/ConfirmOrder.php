@@ -33,7 +33,7 @@ class ConfirmOrder extends Mailable
     {
         return $this->from("website@tijdrijs-hardenberg.nl", "Order Bevestiging Tijdreis Hardenberg")
                     ->subject("Order Bevestiging Tijdreis Hardenberg")
-                    ->view('confirmOrder')
+                    ->view('confirmOrderMail')
                     ->with(['data' => $this->data]);
         
     }

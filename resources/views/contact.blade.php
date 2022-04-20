@@ -26,35 +26,36 @@
         <p class="mt-4 text-lg leading-6 text-gray-500">Voor al uw vragen over Historische vereniging Hardenberg kunt uw ons zowel per mail als telefonisch bereiken.</p>
       </div>
       <div class="mt-12">
-        <form action="#" method="POST" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+        <form action="{{ route('contactForm') }}" method="POST" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+          @csrf
           <div>
             <label for="first-name" class="block text-sm font-medium text-gray-700">Voornaam</label>
             <div class="mt-1">
-              <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Jan" required>
+              <input type="text" name="firstname" id="first-name" autocomplete="given-name" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Jan" required>
             </div>
           </div>
           <div>
             <label for="last-name" class="block text-sm font-medium text-gray-700">Achternaam</label>
             <div class="mt-1">
-              <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Timmer">
+              <input type="text" name="lastname" id="last-name" autocomplete="family-name" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Timmer">
             </div>
           </div>
           <div class="sm:col-span-2">
             <label for="company" class="block text-sm font-medium text-gray-700">Email</label>
             <div class="mt-1">
-              <input type="email" name="company" id="company" autocomplete="organization" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Jantimmer@gmail.com" required>
+              <input type="email" name="email" id="company" autocomplete="organization" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Jantimmer@gmail.com" required>
             </div>
           </div>
           <div class="sm:col-span-2">
             <label for="company" class="block text-sm font-medium text-gray-700">Telefoonnummer</label>
             <div class="mt-1">
-              <input type="text" name="company" id="company" autocomplete="organization" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="0612345678">
+              <input type="text" name="phone" id="company" autocomplete="organization" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="0612345678">
             </div>
           </div>
           <div class="sm:col-span-2">
             <label for="message" class="block text-sm font-medium text-gray-700">Bericht</label>
             <div class="mt-1">
-              <textarea required id="message" name="message" rows="4" class="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md"></textarea>
+              <textarea required id="message" name="msg" rows="4" class="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md"></textarea>
             </div>
           </div>
           <div class="sm:col-span-2">
