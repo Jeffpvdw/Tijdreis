@@ -101,7 +101,7 @@
 
                 <input type="month" value="2022-04" name="date_" id="date_" class="date py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
 
-              <input type="month" value="2022-04" name="date[]" id="date[]" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+             
 
               </div>
             </div>
