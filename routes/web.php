@@ -21,7 +21,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/mollie', [\App\Http\Controllers\PaymentController::class, 'testPayment']);
-
+Route::get('/failedpayment', [\App\Http\Controllers\PaymentController::class, 'FailedPayment']);
 
 require __DIR__.'/auth.php';
 
