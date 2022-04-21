@@ -31,52 +31,62 @@ $(document).ready(function() {
 
     $('#DeleteTrip').click(function () {
         $("#ConfirmTxt").toggleClass("hidden");
-    })
-})
-$(document).ready(function() {
+    });
+
     // AddPerson
     var cloneCount = 1;
-    $("#ep").click(function(e) {
+    $('#del').click(function(e) {
         e.preventDefault();
-        prijs();
+        var del = document.querySelectorAll('.del').length;
+        if (del > 1) {;
+            $(".del:last").remove();
+            prijs();
+            $(".date").trigger("change");
+            cloneCount -= 1;
+        }
+
+    });
+    //DelPerson
+    $('#ep').click(function(e) {
+        e.preventDefault();
         var element = $('#copy');
         $("#container").append(element.html().replaceAll('_', '_'+ cloneCount++));
         prijs();
+        $(".date").trigger("change");
     });
 
-    // age and price
     prijs();
-});
-
-function prijs(){
-    var ditjaar = new Date().getFullYear();
-    var kindP = "€5,-";
-    var volP = "€10,-";
-    var tel = 1;
-    var pricep = "price_";
-    var datep = "date_"
-    console.log('test')
-
-    $('.date').change(function prijs() {
-        console.log('test1')
-        var price = pricep;
-        var date = datep
-        var total = 0;
-        $('.date').each(function () {
-            console.log('test2')
-            tel = 1;
-            var datum = document.getElementById(date).value;
-            if(datum.slice(0, 4) > ditjaar - 12){
-                document.getElementById(price).innerHTML = kindP;
-                total += 5;
-            }else{
-                document.getElementById(price).innerHTML = volP;
-                total += 10;
-            }
-            date = datep.replace('_', '_'+ tel);
-            price = pricep.replace('_', '_'+ tel++);
+    $(".date").trigger("change");
+    // age and price
+    function prijs() {
+        var ditjaar = new Date().getFullYear();
+        var kindB = 10;
+        var volB = 15;
+        var kindP = "€"+kindB+",-";
+        var volP = "€"+volB+",-";
+        var tel = 1;
+        var pricep = "price_";
+        var datep = "date_";
+        $('.date').change(function prijsC() {
+            var price = pricep;
+            var date = datep
+            var total = 0;
+            var tel = 1;
+            $('.date').each(function () {;
+                var datum = document.getElementById(date).value;
+                if(datum.slice(0, 4) > ditjaar - 12){
+                    document.getElementById(price).innerHTML = kindP;
+                    total += kindB;
+                }else{
+                    document.getElementById(price).innerHTML = volP;
+                    total += volB;
+                }
+                date = datep.replace('_', '_'+ tel);
+                price = pricep.replace('_', '_'+ tel++);
+            });
+            var totalPrice ='€'+ total+ ',-';
+            $('#totalPrice').html(totalPrice);
         });
-        var totalPrice ='€'+ total+ ',-';
-        $('#totalPrice').html(totalPrice);
-    });
-};
+    }
+})
+
