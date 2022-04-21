@@ -21,11 +21,12 @@ Route::group([
 
     Route::crud('reservation', 'ReservationCrudController');
     Route::crud('participant', 'ParticipantCrudController');
-    Route::crud('statistic', 'StatisticCrudController');
+    // Route::crud('statistic', 'StatisticCrudController');
     Route::crud('theme', 'ThemeCrudController');
-    
-    Route::get("print", [PrintListController::class,'emptyCheck']);
-
+    Route::get('print', [PrintListController::class,'emptyCheck']);
+    Route::get('statistic', function () {
+        return view('statistics');
+    });
     Route::crud('theme', 'ThemeCrudController');
     Route::crud('reservation', 'ReservationCrudController');
 
