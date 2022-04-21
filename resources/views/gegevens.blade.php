@@ -121,7 +121,7 @@
               <a href="#" class="">
                   <i class="fa-solid fa-plus hover:animate-spin" id="del"></i>
               </a>
-              <span class="ml-2">haal persoon weg</span>
+              <span class="ml-2">Verwijder persoon</span>
           </div>
         <div class="sm:col-span-2">
           <label for="message" class="block text-sm font-medium text-gray-700">Bericht</label>
