@@ -31,21 +31,67 @@ $(document).ready(function() {
 
     $('#DeleteTrip').click(function () {
         $("#ConfirmTxt").toggleClass("hidden");
-    })
-})
-$(document).ready(function() {
+    });
+
     // AddPerson
     var cloneCount = 1;
-    $("#ep").click(function(e) {
+    $('#del').click(function(e) {
         e.preventDefault();
-        prijs();
+        var del = document.querySelectorAll('.del').length;
+        if (del > 1) {;
+            $(".del:last").remove();
+            prijs();
+            $(".date").trigger("change");
+            cloneCount -= 1;
+        }
+
+    });
+    //DelPerson
+    $('#ep').click(function(e) {
+        e.preventDefault();
         var element = $('#copy');
         $("#container").append(element.html().replaceAll('_', '_'+ cloneCount++));
         prijs();
+        $(".date").trigger("change");
     });
 
-    // age and price
     prijs();
+
+    $(".date").trigger("change");
+    // age and price
+    function prijs() {
+        var ditjaar = new Date().getFullYear();
+        var kindB = 10;
+        var volB = 15;
+        var kindP = "€"+kindB+",-";
+        var volP = "€"+volB+",-";
+        var tel = 1;
+        var pricep = "price_";
+        var datep = "date_";
+        $('.date').change(function prijsC() {
+            var price = pricep;
+            var date = datep
+            var total = 0;
+            var tel = 1;
+            $('.date').each(function () {;
+                var datum = document.getElementById(date).value;
+                if(datum.slice(0, 4) > ditjaar - 12){
+                    document.getElementById(price).innerHTML = kindP;
+                    total += kindB;
+                }else{
+                    document.getElementById(price).innerHTML = volP;
+                    total += volB;
+                }
+                date = datep.replace('_', '_'+ tel);
+                price = pricep.replace('_', '_'+ tel++);
+            });
+            var totalPrice ='€'+ total+ ',-';
+            $('#totalPrice').html(totalPrice);
+        });
+    }
+})
+
+
 });
 
 function prijs(){
@@ -69,9 +115,11 @@ function prijs(){
             if(datum.slice(0, 4) > ditjaar - 12){
                 document.getElementById(price).innerHTML = kindP;
                 total += 5;
+                console.log('kid')
             }else{
                 document.getElementById(price).innerHTML = volP;
                 total += 10;
+                console.log('grownup')
             }
             date = datep.replace('_', '_'+ tel);
             price = pricep.replace('_', '_'+ tel++);
@@ -80,3 +128,4 @@ function prijs(){
         $('#totalPrice').html(totalPrice);
     });
 };
+

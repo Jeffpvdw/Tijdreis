@@ -4992,57 +4992,66 @@ $(document).ready(function () {
   });
   $('#DeleteTrip').click(function () {
     $("#ConfirmTxt").toggleClass("hidden");
-  });
-});
-$(document).ready(function () {
-  // AddPerson
+  }); // AddPerson
+
   var cloneCount = 1;
-  $("#ep").click(function (e) {
+  $('#del').click(function (e) {
     e.preventDefault();
-    prijs();
+    var del = document.querySelectorAll('.del').length;
+
+    if (del > 1) {
+      ;
+      $(".del:last").remove();
+      prijs();
+      $(".date").trigger("change");
+      cloneCount -= 1;
+    }
+  }); //DelPerson
+
+  $('#ep').click(function (e) {
+    e.preventDefault();
     var element = $('#copy');
     $("#container").append(element.html().replaceAll('_', '_' + cloneCount++));
     prijs();
-  }); // age and price
-
-  prijs();
-});
-
-function prijs() {
-  var ditjaar = new Date().getFullYear();
-  var kindP = "€5,-";
-  var volP = "€10,-";
-  var tel = 1;
-  var pricep = "price_";
-  var datep = "date_";
-  console.log('test');
-  $('.date').change(function prijs() {
-    console.log('test1');
-    var price = pricep;
-    var date = datep;
-    var total = 0;
-    $('.date').each(function () {
-      console.log('test2');
-      tel = 1;
-      var datum = document.getElementById(date).value;
-
-      if (datum.slice(0, 4) > ditjaar - 12) {
-        document.getElementById(price).innerHTML = kindP;
-        total += 5;
-      } else {
-        document.getElementById(price).innerHTML = volP;
-        total += 10;
-      }
-
-      date = datep.replace('_', '_' + tel);
-      price = pricep.replace('_', '_' + tel++);
-    });
-    var totalPrice = '€' + total + ',-';
-    $('#totalPrice').html(totalPrice);
+    $(".date").trigger("change");
   });
-}
+  prijs();
+  $(".date").trigger("change"); // age and price
 
-;
+  function prijs() {
+    var ditjaar = new Date().getFullYear();
+    var kindB = 10;
+    var volB = 15;
+    var kindP = "€" + kindB + ",-";
+    var volP = "€" + volB + ",-";
+    var tel = 1;
+    var pricep = "price_";
+    var datep = "date_";
+    $('.date').change(function prijsC() {
+      var price = pricep;
+      var date = datep;
+      var total = 0;
+      var tel = 1;
+      $('.date').each(function () {
+        ;
+        var datum = document.getElementById(date).value;
+
+        if (datum.slice(0, 4) > ditjaar - 12) {
+          document.getElementById(price).innerHTML = kindP;
+          total += kindB;
+        } else {
+          document.getElementById(price).innerHTML = volP;
+          total += volB;
+        }
+
+        date = datep.replace('_', '_' + tel);
+        price = pricep.replace('_', '_' + tel++);
+      });
+      var totalPrice = '€' + total + ',-';
+      $('#totalPrice').html(totalPrice);
+    });
+  }
+});
 
 /***/ }),
 
@@ -22293,9 +22302,12 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 /*!*******************************!*\
   !*** ./resources/css/app.css ***!
   \*******************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/css-loader/dist/cjs.js):\nError: Can't resolve '../images/PPF.jpg' in 'C:\\xampp\\htdocs\\Tijdreis\\resources\\css'\n    at finishWithoutResolve (C:\\xampp\\htdocs\\Tijdreis\\node_modules\\enhanced-resolve\\lib\\Resolver.js:309:18)\n    at C:\\xampp\\htdocs\\Tijdreis\\node_modules\\enhanced-resolve\\lib\\Resolver.js:386:15\n    at C:\\xampp\\htdocs\\Tijdreis\\node_modules\\enhanced-resolve\\lib\\Resolver.js:435:5\n    at eval (eval at create (C:\\xampp\\htdocs\\Tijdreis\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:16:1)\n    at C:\\xampp\\htdocs\\Tijdreis\\node_modules\\enhanced-resolve\\lib\\Resolver.js:435:5\n    at eval (eval at create (C:\\xampp\\htdocs\\Tijdreis\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:27:1)\n    at C:\\xampp\\htdocs\\Tijdreis\\node_modules\\enhanced-resolve\\lib\\DescriptionFilePlugin.js:87:43\n    at C:\\xampp\\htdocs\\Tijdreis\\node_modules\\enhanced-resolve\\lib\\Resolver.js:435:5\n    at eval (eval at create (C:\\xampp\\htdocs\\Tijdreis\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at C:\\xampp\\htdocs\\Tijdreis\\node_modules\\enhanced-resolve\\lib\\Resolver.js:435:5\n    at processResult (C:\\xampp\\htdocs\\Tijdreis\\node_modules\\webpack\\lib\\NormalModule.js:758:19)\n    at C:\\xampp\\htdocs\\Tijdreis\\node_modules\\webpack\\lib\\NormalModule.js:860:5\n    at C:\\xampp\\htdocs\\Tijdreis\\node_modules\\loader-runner\\lib\\LoaderRunner.js:399:11\n    at C:\\xampp\\htdocs\\Tijdreis\\node_modules\\loader-runner\\lib\\LoaderRunner.js:251:18\n    at context.callback (C:\\xampp\\htdocs\\Tijdreis\\node_modules\\loader-runner\\lib\\LoaderRunner.js:124:13)\n    at Object.loader (C:\\xampp\\htdocs\\Tijdreis\\node_modules\\css-loader\\dist\\index.js:155:5)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ }),
 
@@ -22533,7 +22545,42 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -22583,13 +22630,68 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"/js/app": 0,
+/******/ 			"css/app": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
 /************************************************************************/
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	__webpack_require__("./resources/js/app.js");
-/******/ 	// This entry module doesn't tell about it's top-level declarations so it can't be inlined
-/******/ 	var __webpack_exports__ = __webpack_require__("./resources/css/app.css");
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/css/app.css")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
 ;
