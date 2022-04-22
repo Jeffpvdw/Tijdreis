@@ -79,7 +79,7 @@
             <div class="mt-5">
               <label for="birthday[]" class="block text-sm font-medium text-gray-700">Geboortedatum</label>
               <div>
-                <input type="month" value="2022-04" min="1900-01" name="date_" id="date_" class="date py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+                <input type="month" value="2022-04" min="1900-01" max="2300-01" name="date_" id="date_" class="date py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
               </div>
             </div>
             <div class="mt-5 divide-y divide-dashed">

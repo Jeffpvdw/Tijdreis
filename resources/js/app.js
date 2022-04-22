@@ -56,7 +56,7 @@ $(document).ready(function() {
     });
 
     prijs();
-<<<<<<< Updated upstream
+
     $(".date").trigger("change");
     // age and price
     function prijs() {
@@ -91,7 +91,7 @@ $(document).ready(function() {
     }
 })
 
-=======
+
 });
 
 function prijs(){
@@ -128,4 +128,4 @@ function prijs(){
         $('#totalPrice').html(totalPrice);
     });
 };
->>>>>>> Stashed changes
+
