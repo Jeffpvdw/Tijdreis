@@ -21,9 +21,13 @@ class StatisticController extends Controller
                 ->selectRaw("TIMESTAMPDIFF(YEAR, DATE(birthdate), current_date) AS age, COUNT(TIMESTAMPDIFF(YEAR, DATE(birthdate), current_date)) as count")
                 ->groupBy('age')
                 ->get();
-
+        $zipcodes = DB::table('statistics')
+            ->selectRaw("zipcode AS zip, COUNT(zipcode) as count")
+            ->groupBy('zip')
+            ->get();
+            
         return view('backpack::base/dashboard', [
-            //'people' => $people, 
+            'zipcodes' => $zipcodes, 
             'ages' => $ages,
             'controller' => $this,
         ]);

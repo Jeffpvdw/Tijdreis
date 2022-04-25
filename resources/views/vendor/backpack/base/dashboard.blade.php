@@ -14,7 +14,7 @@
     <script type="text/javascript">
 
         // Load the Visualization API and the corechart package.
-        google.charts.load('current', {'packages': ['corechart']});
+        google.charts.load('current', {'packages': ['corechart', 'table']});
 
         // als pagina geladen voer functie uit
         google.charts.setOnLoadCallback(drawChart);
@@ -55,14 +55,14 @@
             var data = new google.visualization.DataTable();
 
             // voer hier de kolommen in om te laten visualiseren
-            data.addColumn('string', 'Leeftijd');
+            data.addColumn('string', 'postcode');
             data.addColumn('number', 'aantal');
             data.addRows([
                 // informatie invoegen gaat als volgt ['(display naam)', (aantal, dit word door de api omgerekend naar procenten)]
-                ['< 5', 1],
-                ['5 - 15', 1],
-                ['15 - 18', 1],
-                [' 50 >', 1]
+                @foreach($zipcodes as $zipcode) 
+                    {{ $loop->first ? '' : ', ' }}
+                    ['{{$zipcode->zip}}', {{$zipcode->count}}]
+                @endforeach
             ]);
 
             // dit is waar je je grafiek een naam kan geven en opmaak kan bepalen
@@ -72,12 +72,12 @@
                 },
                 'title': 'dikke aids jij',
                 'width': '100%',
-                'height': 400
+                'height': 'auto'
             };
 
             // hier word naar een id gezocht in je bestand als dit id is gevonden word de grafiek daar in geladen als svg
-            var chart = new google.visualization.PieChart(document.getElementById('andere dinges'));
-            let draw = chart.draw(data, options);
+            var table = new google.visualization.Table(document.getElementById('andere dinges'));
+            let draw = table.draw(data, options);
             // dit is  het einde van de code voor een grafiek
         }
 
