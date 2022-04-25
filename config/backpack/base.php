@@ -72,7 +72,7 @@ return [
 
 
     // Show / hide breadcrumbs on admin panel pages.
-    'breadcrumbs' => true,
+    'breadcrumbs' => false,
 
     // Horizontal navbar classes. Helps make the admin panel look similar to your project's design.
     'header_class' => 'app-header navbar navbar-color bg-dark border-0',

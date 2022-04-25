@@ -85,7 +85,7 @@
     </script>
 </head>
 <body>
-<h2>Statistieken</h2>
+<h2 class="font-3xl">Statistieken</h2>
 <div class="h-full min-h-screen flex">
     <!-- Bottom section -->
     <div class="min-h-0 flex-1 flex overflow-hidden">
