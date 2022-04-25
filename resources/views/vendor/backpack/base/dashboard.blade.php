@@ -70,13 +70,13 @@
                 chartArea: {
                     width: '50%'
                 },
-                'title': 'dikke aids jij',
+                'title': 'postcodes',
                 'width': '100%',
                 'height': 'auto'
             };
 
             // hier word naar een id gezocht in je bestand als dit id is gevonden word de grafiek daar in geladen als svg
-            var table = new google.visualization.Table(document.getElementById('andere dinges'));
+            var table = new google.visualization.Table(document.getElementById('postcodes'));
             let draw = table.draw(data, options);
             // dit is  het einde van de code voor een grafiek
         }
@@ -95,7 +95,7 @@
                      class="w-full md:w-auto justify-center content-start flex-1 h-full flex flex-col overflow-y-auto lg:order-last">
                 <!-- Your content -->
                 <div id="leeftijden" class="h-auto flex-initial w-auto"></div>
-                <div id="andere dinges" class="h-auto flex-1 w-auto"></div>
+                <div id="postcodes" class="h-auto flex-1 w-auto"></div>
             </section>
             <!-- Secondary column (hidden on smaller screens) -->
         </main>
