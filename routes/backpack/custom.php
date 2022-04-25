@@ -24,9 +24,7 @@ Route::group([
     // Route::crud('statistic', 'StatisticCrudController');
     Route::crud('theme', 'ThemeCrudController');
     Route::get('print', [PrintListController::class,'emptyCheck']);
-    Route::get('statistic', function () {
-        return view('statistics');
-    });
+   Route::get('dashboard', ['middleware'=>'auth', 'uses'=>'StatisticController@selectpeople']);
     Route::crud('theme', 'ThemeCrudController');
     Route::crud('reservation', 'ReservationCrudController');
 

@@ -29,11 +29,10 @@
             data.addColumn('number', 'aantal');
             data.addRows([
                 // informatie invoegen gaat als volgt ['(display naam)', (aantal, dit word door de api omgerekend naar procenten)]
-                ['< 5', 7],
-                ['5 - 15', 15],
-                ['15 - 18', 12],
-                ['18 - 50', 40],
-                [' 50 >', 8]
+                @foreach($ages as $age) 
+                    {{ $loop->first ? '' : ', ' }}
+                    ['{{$age->age}}', {{$age->count}}]
+                @endforeach
             ]);
 
             // dit is waar je je grafiek een naam kan geven en opmaak kan bepalen

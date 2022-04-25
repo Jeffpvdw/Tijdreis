@@ -2,14 +2,14 @@
 
 namespace App\Models;
 
-use Backpack\CRUD\app\Models\Traits\CrudTrait;
+// use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Participant;
-use App\Models\Tour;
+// use App\Models\Participant;
+// use App\Models\Tour;
 
 class Statistic extends Model
 {
-    use CrudTrait;
+    // use CrudTrait;
 
     /*
     |--------------------------------------------------------------------------
@@ -37,18 +37,20 @@ class Statistic extends Model
     |--------------------------------------------------------------------------
     */
 
-    public function tourDate(){
-        return $this->belongsTo(Tour::class, 'tour_id', 'id');
-    }
+    $users = DB::select('select * from student_details');
 
-    public function statisticsName(){
-        return $this->belongsTo(Participant::class, 'participant_id', 'id');
-        return $this->concatenateNom();
-    }
+    // public function tourDate(){
+    //     return $this->belongsTo(Tour::class, 'tour_id', 'id');
+    // }
 
-    private function concatnateNom(){
-        return $this->first_name . ' ' . $this->last_name;
-    }  
+    // public function statisticsName(){
+    //     return $this->belongsTo(Participant::class, 'participant_id', 'id');
+    //     return $this->concatenateNom();
+    // }
+
+    // private function concatnateNom(){
+    //     return $this->first_name . ' ' . $this->last_name;
+    // }  
 
 
 
