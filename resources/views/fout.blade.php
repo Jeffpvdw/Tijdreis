@@ -13,8 +13,8 @@
               <span class="text-l sm:text-5xl lg:text-6xl block text-[#3F5062] text-opacity-50">Oeps, er is iets mis gegaan.</span>
             </h1>
             <p class="mt-6 max-w-lg mx-auto text-center text-xl text-[#af8352] sm:max-w-3xl">
-              Het lijkt er op dat er iets niet goed is gegaan tijdens het betalen. Kijk als u blieft of u iets in de mail heeft gekregen, of of er iets af is geschreven op uw bankrekening.
-              Als het hier niet goed is gegaan neem alst u blieft contact op met onze supportlijn.
+              Het lijkt er op dat er iets niet goed is gegaan tijdens het betalen. Kijk alsublieft of u iets in de mail heeft gekregen, of er iets af is geschreven op uw bankrekening.
+              Als het hier niet goed is gegaan neem alstublieft contact op met onze supportlijn via: 0523-265624.
             </p>
             <div class="mt-10 max-w-sm mx-auto lg:max-w-none lg:flex lg:justify-center">
               <div class="space-y-4 lg:space-y-0 lg:mx-auto lg:inline-grid lg:grid-cols-2 lg:gap-5">
