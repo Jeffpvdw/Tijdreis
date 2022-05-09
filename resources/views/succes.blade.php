@@ -13,8 +13,8 @@
               <span class="text-l sm:text-5xl lg:text-6xl block text-[#3F5062] text-opacity-50">Bedankt voor uw bestelling</span>
             </h1>
             <p class="mt-6 max-w-lg mx-auto text-center text-xl text-[#af8352] sm:max-w-3xl">
-              De betaling is gelukt! Hartelijk bedankt voor uw bestelling voor meer informatie over de reis kunt u op de informatie knop hieronder drukken.
-              Informatie krijgt u via een mail.
+              De betaling is gelukt! Hartelijk bedankt voor uw bestelling, voor meer informatie over de reis kunt u op de "Bekijk thema's" knop hieronder drukken.
+              Informatie krijgt u via de mail.
             </p>
             <div class="mt-10 max-w-sm mx-auto lg:max-w-none lg:flex lg:justify-center">
               <div class="space-y-4 lg:space-y-0 lg:mx-auto lg:inline-grid lg:grid-cols-2 lg:gap-5">

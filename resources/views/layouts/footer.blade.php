@@ -27,7 +27,7 @@
                   <p class="text-base text-gray-500"> <b>Openingstijden:</b><br> maandag, woensdag, vrijdag van 9.00 tot 12.00 uur en op afspraak.</p>
                 </li>
                 <li>
-                  <p class="text-base text-gray-500"> <b>Locatie:</b><br> Wilhelminaplein 3A 7772 AH  Hardenberg</p>
+                  <p class="text-base text-gray-500"> <b>Locatie:</b><br> Wilhelminaplein 3A<br> 7772 AH Hardenberg</p>
                 </li>
               </ul>
             </div>
@@ -59,7 +59,7 @@
             <i class="fa-solid fa-2x fa-at"></i>
           </a>
         </div>
-        <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">&copy; 2022 Tijdreis Hardenberg. All rights reserved. </p>
+        <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">&copy; <span><script>document.write(new Date().getFullYear())</script></span> Tijdreis Hardenberg. All rights reserved. </p>
       </div>
     </div>
   </footer>
