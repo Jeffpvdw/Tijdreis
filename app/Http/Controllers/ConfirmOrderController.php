@@ -11,7 +11,8 @@ class ConfirmOrderController
     function sendMail(Request $request)
     {
         $data = [
-            'email' => $request->email,
+            'email' => $request->user_mail,
+            'phone' => $request->telefoonnumer,
             'firstname' => $request->firstName_,
             'lastname' => $request->lastName_,
             'tour' => $request->tour,
@@ -19,7 +20,7 @@ class ConfirmOrderController
         ];
 
         Mail::to("info@hvhardenberg.nl")->send(new ConfirmOrder($data));
-        return view("contactsend");
+        return view("succes");
     }
 
 }
