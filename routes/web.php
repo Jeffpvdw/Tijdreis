@@ -33,15 +33,9 @@ Route::get('/bestel', function () {
     return view('bestel');
 });
 
-Route::get('/gegevens', function () {
-    return view('gegevens');
-});
+Route::get('/gegevens', [OrderController::class, 'get']);
 
 Route::post('/gegevens', function () {
-    return view('gegevens');
-});
-
-Route::get('/gegevens', function () {
     return view('gegevens');
 });
 
