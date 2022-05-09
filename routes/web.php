@@ -77,7 +77,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/mollie', [\App\Http\Controllers\PaymentController::class, 'testPayment']);
+Route::get('/mollie', [\App\Http\Controllers\PaymentController::class, 'testPayment'])->name('mollie');
 Route::get('/failedpayment', [\App\Http\Controllers\PaymentController::class, 'FailedPayment']);
 
 require __DIR__.'/auth.php';
@@ -88,13 +88,4 @@ Route::get('/mail', function () {
 
 Route::post('/confirmorder', [\App\Http\Controllers\ConfirmOrderController::class, 'sendMail'] )->name('confirmOrder');
 
-// Route::get('/contact', function () {
-//     return view('contactTest');
-// });
-
 Route::post('/contactform', [\App\Http\Controllers\ContactController::class, 'sendMail'] )->name('contactForm');
-
-
-// Route::post('/contactform', function () {
-//     Mail::to('test@demo.nl')->send(new ContactForm());
-// })->name('appelmoes');

@@ -34,6 +34,14 @@
 
                 <tr>
                     <td style="text-align: center;">
+                        <h3>Door u ingevoerde contactgegevens:</h4>
+                        <p>{{ $data['email'] }}</p>
+                        <p>{{ $data['phone'] }}</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: center;">
                         <h3>Totaalprijs:</h4>
                         <p>{{ $data['price'] }}</p>
                     </td>
