@@ -32,12 +32,7 @@
           </form>
           <!-- Product details -->
           <div class="mt-10">
-              <p class="mt-4 text-lg text-gray-500">Er is een bekende en wijze uitspraak die zegt:</p>
-              <blockquote class="mt-4 text-lg text-center text-gray-500">“Je moet het <u>verleden</u>
-                  kennen om het
-                  <u>heden</u> te begrijpen,
-                  en om er voor de <u>toekomst</u> van te leren”.
-              </blockquote>
+              <p class="mt-4 text-lg text-gray-500">Bij te weinig deelname wordt u hierover geïnformeerd en stellen we een andere datum voor.</p>
               <p class="mt-4 text-lg text-gray-500">Dat wil de Historische Vereniging Hardenberg e.o. op
                   een nieuwe manier in de praktijk
                   brengen door middel van thematische Tijdreizen. Het zijn interessante excursies langs

@@ -8,7 +8,7 @@
               <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">  </a>
               <ul role="list" class="mt-4 space-y-4">
                 <li>
-                  <p class="text-base text-gray-500"> <b>Handelsnaam:</b><br> Historische Vereniging Hardenberg en omgeving</p>
+                  <p class="text-base text-gray-500"> <b>Handelsnaam:</b><br> <a href="https://www.hvhardenberg.nl/lidmaatschap/" target="_blank">Historische Vereniging Hardenberg en omgeving</a></p>
                 </li>
                 <li>
                   <p class="text-base text-gray-500"> <b>KVK Nummer:</b><br> 40061483</p>

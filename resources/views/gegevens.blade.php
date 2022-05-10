@@ -97,7 +97,7 @@
           <a href="#" class="">
             <i class="fa-solid fa-plus hover:animate-spin" id="ep"></i>
           </a>
-          <span class="ml-2">Voeg persoon toe</span>
+          <span class="ml-2">Voeg een persoon toe</span>
         </div>
         <div class="flex items-center">
           <a href="#" class="">
@@ -105,12 +105,12 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
             </svg>
           </a>
-          <span class="ml-2">Verwijder persoon</span>
+          <span class="ml-2">Verwijder een persoon</span>
         </div>
         <div class="sm:col-span-2">
           <label for="message" class="block text-sm font-medium text-gray-700">Bericht</label>
           <div class="flex items-start">
-            <textarea name="message" id="message" placeholder="Gebruikt u een wandelstok of rolator, heeft u alergiën of wilt u iets anders melden? Kunt u het hier opschrijven." class="h-40 bg-white py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"></textarea>
+            <textarea name="message" id="message" placeholder="Gebruikt u een wandelstok of rollator, heeft u allergiën of wilt u iets anders melden? Kunt u het hier opschrijven." class="h-40 bg-white py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"></textarea>
           </div>
         </div>
         <div class="sm:col-span-2">
