@@ -31,7 +31,7 @@
           <div class="sm:flex sm:justify-between">
             <select name="tour" class="bg-white py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
               @foreach($tours as $tour)
-              <option value="{{ $tour->id }}">{{ $tour->capacity }}</option>
+              <option value="{{ $tour->id }}">{{$tour->themes->name}} - {{ $tour->dateTime }}</option>
               @endforeach
             </select>
           </div>
