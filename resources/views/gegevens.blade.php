@@ -110,7 +110,7 @@
         <div class="sm:col-span-2">
           <label for="message" class="block text-sm font-medium text-gray-700">Bericht</label>
           <div class="flex items-start">
-            <textarea name="message" id="message" placeholder="Gebruikt u een wandelstok of rolator, heeft u alergiën of wilt u iets anders melden? Kunt u het hier opschrijven." class="h-40 bg-white py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"></textarea>
+            <textarea name="message" id="message" placeholder="Gebruikt u een wandelstok of rollator, heeft u allergieën of wilt u iets anders melden? U kunt het hier opschrijven." class="bg-white py-3 px-4 block w-full h-60 shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"></textarea>
           </div>
         </div>
         <div class="sm:col-span-2">

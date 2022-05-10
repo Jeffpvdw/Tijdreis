@@ -124,7 +124,7 @@
                                 energiebronnen waren hier voorradig en werden er gebruikt? En wat was de invloed daarvan
                                 op het gebied, de samenleving en het dagelijks leven?
                                 Energiebronnen die aan de orde komen tijdens de Tijdreis zijn: turf, kolen, aardgas,
-                                wind- en zonne-energie, biogas of waterstofgas? </p>
+                                wind- en zonne-energie, biogas en waterstofgas. </p>
                             <div class="mt-6">
                                 <a href="/thema"
                                    class="inline-flex bg-gradient-to-r bg-[#5b9e8c] to-indigo-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:bg-opacity-70">
@@ -147,7 +147,7 @@
     <!-- Gradient Feature Section -->
     <div class="bg-gradient-to-b from-[#5b9e8c] to-[#3f5062]">
         <div class="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-14 sm:pb-24 lg:max-w-7xl lg:px-8">
-            <h2 class="text-3xl font-extrabold text-white tracking-tight text-center">De route van dit jaar</h2>
+            <h2 class="text-3xl font-extrabold text-white tracking-tight text-center">Routekaart</h2>
             {{--            <iframe class="rounded-2xl w-full h-[28rem] mt-12"--}}
             {{--                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2424.701203676492!2d6.614742915942823!3d52.57501453990292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4165204865453b6f%3A0x3dba0f1341eb84e5!2sHistorische%20Vereniging%20Hardenberg%20en%20Omgeving!5e0!3m2!1sen!2snl!4v1646654849392!5m2!1sen!2snl"--}}
             {{--                    style="border:0;" allowfullscreen="" loading="lazy"></iframe>--}}
