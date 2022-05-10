@@ -43,25 +43,25 @@
         </thead>
         <tbody>
         <tr class="border-b-4 border-black">
-            {{--                        @foreach ($tour as $item)--}}
+{{--                                    @foreach ($tour as $item)--}}
             <td class="text-center border border-slate-300">Jan</td>
             <td class="text-center border border-slate-300">De</td>
             <td class="text-center border border-slate-300">Vries</td>
             <td class="text-center border border-slate-300">Gisteren</td>
             <td class="text-center border border-slate-300">1234 AB</td>
             <td class="text-center border border-slate-300">Help ik heb een zware noten allergie en ik gebruik een
-                rollator om te lopen.
+                rollator om te lopen
             </td>
         </tr>
-        {{--                        @endforeach--}}
+{{--                                @endforeach--}}
         </tbody>
     </table>
 </div>
 <div class="w-full text-center">
 
-    {{--        @else--}}
+{{--            @else--}}
     <h1>Er is geen tour ID ingevuld</h1>
-    {{--        @endif--}}
+{{--            @endif--}}
 </div>
 
 
