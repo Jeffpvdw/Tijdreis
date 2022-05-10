@@ -29,7 +29,7 @@ Route::get('/contactsend', function () {
     return view('contactsend');
 });
 
-Route::get('/bestel', function () {
+Route::get('/boek', function () {
     return view('bestel');
 });
 

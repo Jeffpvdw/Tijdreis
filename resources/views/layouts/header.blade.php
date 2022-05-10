@@ -18,7 +18,7 @@
         </div>
         <nav class="hidden md:flex space-x-10">
           <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900"> Home </a>
-          <a href="/bestel" class="text-base font-medium text-gray-500 hover:text-gray-900"> Bestellen </a>
+          <a href="/boek" class="text-base font-medium text-gray-500 hover:text-gray-900"> Boeken </a>
           <a href="/tour" class="text-base font-medium text-gray-500 hover:text-gray-900"> Tour </a>
           <!-- themamenu -->
           <ul>
@@ -71,7 +71,7 @@
           <div class="py-6 px-5">
             <div class="grid grid-cols-2 gap-4">
               <a href="/" class="text-base font-medium text-gray-900 hover:text-gray-700"> Home </a>
-              <a href="/bestel" class="text-base font-medium text-gray-900 hover:text-gray-700"> Bestellen </a>
+              <a href="/boek" class="text-base font-medium text-gray-900 hover:text-gray-700"> Boeken </a>
               <a href="/tour" class="text-base font-medium text-gray-900 hover:text-gray-700"> Tour </a>
               <!-- themamenu -->
               <ul>
