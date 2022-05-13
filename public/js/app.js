@@ -4992,6 +4992,9 @@ $(document).ready(function () {
   });
   $('#DeleteTrip').click(function () {
     $("#ConfirmTxt").toggleClass("hidden");
+  });
+  $('#clipboard').click(function () {
+    $("#cat").toggleClass("hidden");
   }); // AddPerson
 
   var cloneCount = 1;
@@ -5052,6 +5055,44 @@ $(document).ready(function () {
     });
   }
 });
+
+function prijs() {
+  var ditjaar = new Date().getFullYear();
+  var kindP = "€5,-";
+  var volP = "€10,-";
+  var tel = 1;
+  var pricep = "price_";
+  var datep = "date_";
+  console.log('test');
+  $('.date').change(function prijs() {
+    console.log('test1');
+    var price = pricep;
+    var date = datep;
+    var total = 0;
+    $('.date').each(function () {
+      console.log('test2');
+      tel = 1;
+      var datum = document.getElementById(date).value;
+
+      if (datum.slice(0, 4) > ditjaar - 12) {
+        document.getElementById(price).innerHTML = kindP;
+        total += 5;
+        console.log('kid');
+      } else {
+        document.getElementById(price).innerHTML = volP;
+        total += 10;
+        console.log('grownup');
+      }
+
+      date = datep.replace('_', '_' + tel);
+      price = pricep.replace('_', '_' + tel++);
+    });
+    var totalPrice = '€' + total + ',-';
+    $('#totalPrice').html(totalPrice);
+  });
+}
+
+;
 
 /***/ }),
 
