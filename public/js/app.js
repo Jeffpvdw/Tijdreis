@@ -5092,6 +5092,7 @@ function prijs() {
   });
 }
 
+; //easter egg
 
 var EasterCount = 0;
 $(document).keyup(function (evt) {
