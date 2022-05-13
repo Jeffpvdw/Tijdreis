@@ -28,7 +28,7 @@
                             <a href="/thema"
                                class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-grey-500 bg-white hover:bg-indigo-50 sm:px-8 italic">
                                 Lees verder... </a>
-                            <a href="/bestel"
+                            <a href="/boek"
                                class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#5b9e8c] hover:bg-opacity-70 sm:px-8 italic">
                                 ...of boek direct een tijdreis </a>
                         </div>

@@ -18,7 +18,7 @@
             </p>
             <div class="mt-10 max-w-sm mx-auto lg:max-w-none lg:flex lg:justify-center">
               <div class="space-y-4 lg:space-y-0 lg:mx-auto lg:inline-grid lg:grid-cols-2 lg:gap-5">
-                <a href="/bestel" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-grey-500 bg-white hover:bg-indigo-50 sm:px-8 border-slate-200 border-1"> Ga terug </a>
+                <a href="/boek" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-grey-500 bg-white hover:bg-indigo-50 sm:px-8 border-slate-200 border-1"> Ga terug </a>
                 <a href="/contact" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#5b9e8c] hover:bg-opacity-70 sm:px-8"> Contact </a>
               </div>
             </div>
