@@ -33,6 +33,10 @@ $(document).ready(function() {
         $("#ConfirmTxt").toggleClass("hidden");
     });
 
+    $('#clipboard').click(function () {
+        $("#cat").toggleClass("hidden");
+    });
+
     // AddPerson
     var cloneCount = 1;
     $('#del').click(function(e) {
@@ -89,9 +93,6 @@ $(document).ready(function() {
             $('#totalPrice').html(totalPrice);
         });
     }
-})
-
-
 });
 
 function prijs(){

@@ -3,6 +3,10 @@
 @include('layouts.header')
 
 <main>
+    <div class="absolute hidden top-0 flex flex-col items-center" id="cat">
+        <img class="h-32" src="/images/cat.jpg" alt="meow!">
+        <span class="text-xs">meow!</span>
+    </div>
     <!-- Hero section -->
     <div class="relative">
         <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100"></div>
@@ -28,7 +32,7 @@
                             <a href="/thema"
                                class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-grey-500 bg-white hover:bg-indigo-50 sm:px-8 italic">
                                 Lees verder... </a>
-                            <a href="/bestel"
+                            <a href="/boek"
                                class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#5b9e8c] hover:bg-opacity-70 sm:px-8 italic">
                                 ...of boek direct een tijdreis </a>
                         </div>
@@ -113,7 +117,7 @@
                         <div>
               <span class="h-12 w-12 rounded-md flex items-center justify-center bg-[#5b9e8c]">
                 <!-- Heroicon name: outline/sparkles -->
-                <i class="fa-solid fa-clipboard-list text-white fa-2x"></i>
+                <i class="fa-solid fa-clipboard-list text-white fa-2x" id="clipboard"></i>
               </span>
                         </div>
                         <div class="mt-6">

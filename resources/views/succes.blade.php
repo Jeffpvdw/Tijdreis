@@ -17,7 +17,7 @@
               Informatie krijgt u via de mail.
             </p>
             <div class="mt-10 max-w-sm mx-auto lg:max-w-none lg:flex lg:justify-center">
-              <div class="space-y-4 lg:space-y-0 lg:mx-auto lg:inline-grid lg:grid-cols-2 lg:gap-5">
+              <div class="space-y-4 lg:space-y-0 lg:mx-auto lg:inline-grid lg:gap-5">
                 <a href="{{--PDF download, not available yet--}}" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#5b9e8c] hover:bg-opacity-70 sm:px-8"> Reisinformatie </a>
               </div>
             </div>
@@ -27,3 +27,4 @@
     </div>
   </div>
 </main>
+<script src="js/app.js"></script>
