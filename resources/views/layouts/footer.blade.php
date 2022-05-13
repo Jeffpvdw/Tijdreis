@@ -57,7 +57,7 @@
           </a>
           <a href="https://www.hvhardenberg.nl/lidmaatschap" target="_blank" class="flex flex-col items-center text-gray-400 hover:text-gray-500">
             <i class="fa-solid fa-user-plus fa-2x"></i>
-            <span class="text-l font-bold">Wordt lid!</span>
+            <span class="text-l font-bold">Word lid!</span>
           </a>
           <a href="/contact" class="text-gray-400 hover:text-gray-500">
             <i class="fa-solid fa-2x fa-at"></i>
