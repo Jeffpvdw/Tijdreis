@@ -3,6 +3,10 @@
 @include('layouts.header')
 
 <main>
+    <div class="absolute hidden top-0 flex flex-col items-center" id="cat">
+        <img class="h-32" src="/images/cat.jpg" alt="meow!">
+        <span class="text-xs">meow!</span>
+    </div>
     <!-- Hero section -->
     <div class="relative">
         <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100"></div>
@@ -113,7 +117,7 @@
                         <div>
               <span class="h-12 w-12 rounded-md flex items-center justify-center bg-[#5b9e8c]">
                 <!-- Heroicon name: outline/sparkles -->
-                <i class="fa-solid fa-clipboard-list text-white fa-2x"></i>
+                <i class="fa-solid fa-clipboard-list text-white fa-2x" id="clipboard"></i>
               </span>
                         </div>
                         <div class="mt-6">
