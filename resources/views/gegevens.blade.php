@@ -2,6 +2,8 @@
 
 @include('layouts.header')
 
+@php setlocale(LC_ALL, 'NL_nl'); @endphp
+
 <main class="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
   <div class="relative max-w-[45rem] mx-auto">
     <svg class="absolute left-full transform translate-x-1/2" width="404" height="404" fill="none" viewBox="0 0 404 404" aria-hidden="true">
@@ -31,7 +33,7 @@
           <div class="sm:flex sm:justify-between">
             <select name="tour" class="bg-white py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
               @foreach($tours as $tour)
-              <option value="{{ $tour->id }}">{{$tour->themes->name}} - {{ date('d-m-Y', strtotime($tour->dateTime)) }}</option>
+              <option value="{{ $tour->id }}">Thema: {{$tour->name}} - {{ strftime('%e %B %Y', strtotime($tour->dateTime)) }} - Nog {{$tour->capacity}} plaatsen beschikbaar.</option>
               @endforeach
             </select>
           </div>
