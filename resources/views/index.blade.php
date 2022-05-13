@@ -53,7 +53,7 @@
                 <div class="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
                     <a href="https://www.hvhardenberg.nl/lidmaatschap" target="_blank" class="flex flex-col items-center opacity-80 text-[#5b9e8c] hover:opacity-80 lg:opacity-40">
                         <i class="fa-solid fa-user-plus fa-4x"></i>
-                        <span class="text-xl font-bold">Wordt lid!</span>
+                        <span class="text-xl font-bold">Word lid!</span>
                     </a>
                 </div>
                 <div class="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
