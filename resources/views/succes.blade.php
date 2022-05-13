@@ -27,3 +27,4 @@
     </div>
   </div>
 </main>
+<script src="js/app.js"></script>
