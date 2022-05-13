@@ -107,11 +107,16 @@
                 <br>
                 - Waterstof? </p>
         </div>
-        <div class="block justify-center flex flex-wrap pb-4 mt-5">
-
-
+        <div id="EasterEgg" class="fixed inset-0 w-full h-auto bg-white hidden">
+            <div class="flex justify-center items-center w-full">
+                <div class="w-fit">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank">
+                        <img src="images/easteregg.jpg" alt="easter egg van Pict21Va" class="h-screen w-auto">
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+
 
 @include('layouts.footer')

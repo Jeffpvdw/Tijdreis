@@ -128,5 +128,19 @@ function prijs(){
         var totalPrice ='€'+ total+ ',-';
         $('#totalPrice').html(totalPrice);
     });
+
 };
+
+//easter egg
+var EasterCount = 0;
+$( document ).keyup(function(evt) {
+    if (evt.keyCode == "90") {
+        EasterCount += 1;
+        if (EasterCount == 50) {
+            $("#EasterEgg").toggleClass("hidden");
+        } else if (EasterCount == 51){
+            $("#EasterEgg").toggleClass("hidden");
+        }
+    };
+});
 
