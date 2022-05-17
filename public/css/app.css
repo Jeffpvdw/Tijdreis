@@ -931,6 +931,12 @@ select {
 .h-\[70vh\] {
   height: 70vh;
 }
+.h-auto {
+  height: auto;
+}
+.h-screen {
+  height: 100vh;
+}
 .h-fit {
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -951,17 +957,11 @@ select {
 .h-60 {
   height: 15rem;
 }
-.h-auto {
-  height: auto;
-}
 .h-10 {
   height: 2.5rem;
 }
 .h-14 {
   height: 3.5rem;
-}
-.h-screen {
-  height: 100vh;
 }
 .h-1\/4 {
   height: 25%;
@@ -990,6 +990,14 @@ select {
 .w-80 {
   width: 20rem;
 }
+.w-fit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.w-auto {
+  width: auto;
+}
 .w-3\/6 {
   width: 50%;
 }
@@ -1004,9 +1012,6 @@ select {
 }
 .w-6 {
   width: 1.5rem;
-}
-.w-auto {
-  width: auto;
 }
 .w-8 {
   width: 2rem;
@@ -1037,11 +1042,6 @@ select {
 }
 .w-1\/2 {
   width: 50%;
-}
-.w-fit {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 .w-48 {
   width: 12rem;

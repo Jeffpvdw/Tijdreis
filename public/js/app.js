@@ -4995,6 +4995,9 @@ $(document).ready(function () {
   });
   $('#clipboard').click(function () {
     $("#cat").toggleClass("hidden");
+    setTimeout(function () {
+      $("#cat").toggleClass("hidden");
+    }, 1250);
   }); // AddPerson
 
   var cloneCount = 1;
