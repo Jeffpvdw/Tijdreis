@@ -5,6 +5,7 @@ use App\Mail\ConfirmOrder;
 use App\Mail\ContactForm;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PrintListController;
+use Illuminate\Support\Facades\App;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,8 @@ use App\Http\Controllers\PrintListController;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+*/  
+
 
 Route::get('/', function () {
     return view('index');
