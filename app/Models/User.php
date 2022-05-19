@@ -53,6 +53,6 @@ class User extends Authenticatable
     }
 
     public function taxPercentage() {
-        return 21;
+        return 20;
     }
 }
