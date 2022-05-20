@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\App;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/  
+*/
 
 
 Route::get('/', function () {
@@ -85,3 +85,5 @@ Route::get('/mail', function () {
 Route::post('/confirmorder', [\App\Http\Controllers\ConfirmOrderController::class, 'sendMail'] )->name('confirmOrder');
 
 Route::post('/contactform', [\App\Http\Controllers\ContactController::class, 'sendMail'] )->name('contactForm');
+
+Route::get('/clear-unpaid-reservations', [\App\Http\Controllers\ClearUnpaidController::class, 'check']);
