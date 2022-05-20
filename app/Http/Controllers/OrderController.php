@@ -16,9 +16,9 @@ class OrderController extends Controller
         $tours = DB::select(<<<SQL
         SELECT `t`.`id`, `th`.`name`, `t`.`dateTime`, (`t`.`capacity` - COUNT(`p`.`id`)) AS `capacity`
         FROM `tours` `t`
-        JOIN `themes` `th` ON `t`.`theme_id` = `th`.`id`
-        JOIN `reservations` `r` ON `r`.`tour_id` = `t`.`id`
-        JOIN `participants` `p` ON `p`.`reservation_id` = `r`.`id`
+        LEFT JOIN `themes` `th` ON `t`.`theme_id` = `th`.`id`
+        LEFT JOIN `reservations` `r` ON `r`.`tour_id` = `t`.`id`
+        LEFT JOIN `participants` `p` ON `p`.`reservation_id` = `r`.`id`
         WHERE `t`.`dateTime` > NOW()
         GROUP BY `r`.`tour_id`
 SQL);
