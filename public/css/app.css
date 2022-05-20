@@ -954,8 +954,8 @@ select {
 .h-16 {
   height: 4rem;
 }
-.h-60 {
-  height: 15rem;
+.h-40 {
+  height: 10rem;
 }
 .h-10 {
   height: 2.5rem;
@@ -965,9 +965,6 @@ select {
 }
 .h-1\/4 {
   height: 25%;
-}
-.h-40 {
-  height: 10rem;
 }
 .h-4 {
   height: 1rem;

@@ -5054,7 +5054,7 @@ $(document).ready(function () {
         price = pricep.replace('_', '_' + tel++);
       });
       var totalPrice = '€' + total + ',-';
-      $('#totalPrice').html(totalPrice);
+      document.write(totalPrice);
     });
   }
 });
