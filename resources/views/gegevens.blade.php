@@ -146,7 +146,7 @@
         </div>
         <div class="divide-y divide-dashed sm:col-span-2">
           <p>Totaal:</p>
-          <p id="totalPrice" name="totalPrice" class="text-3xl font-bold">€10,-</p>
+          <p id="totalPrice" name="totalPrice"></p>
         </div>
         <div class="sm:col-span-2">
           <button type="submit" class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#5b9e8c] hover:bg-opacity-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Ga
