@@ -6,7 +6,7 @@ window.Alpine = Alpine;
 
 Alpine.start();
 
-$(document).ready(function() {
+$(document).ready(function () {
     $('.dropbtn').click(function () {
         //rotates arrow next to "Thema's" button
         $(".HeaderArrow").toggleClass("rotate-180");
@@ -35,17 +35,18 @@ $(document).ready(function() {
 
     $('#clipboard').click(function () {
         $("#cat").toggleClass("hidden");
-        setTimeout(function() {
+        setTimeout(function () {
             $("#cat").toggleClass("hidden");
         }, 1250)
     });
 
     // AddPerson
     var cloneCount = 1;
-    $('#del').click(function(e) {
+    $('#del').click(function (e) {
         e.preventDefault();
         var del = document.querySelectorAll('.del').length;
-        if (del > 1) {;
+        if (del > 1) {
+            ;
             $(".del:last").remove();
             prijs();
             $(".date").trigger("change");
@@ -54,10 +55,10 @@ $(document).ready(function() {
 
     });
     //DelPerson
-    $('#ep').click(function(e) {
+    $('#ep').click(function (e) {
         e.preventDefault();
         var element = $('#copy');
-        $("#container").append(element.html().replaceAll('_', '_'+ cloneCount++));
+        $("#container").append(element.html().replaceAll('_', '_' + cloneCount++));
         prijs();
         $(".date").trigger("change");
     });
@@ -65,13 +66,14 @@ $(document).ready(function() {
     prijs();
 
     $(".date").trigger("change");
+
     // age and price
     function prijs() {
         var ditjaar = new Date().getFullYear();
         var kindB = 10;
         var volB = 15;
-        var kindP = "€"+kindB+",-";
-        var volP = "€"+volB+",-";
+        var kindP = "€" + kindB + ",-";
+        var volP = "€" + volB + ",-";
         var tel = 1;
         var pricep = "price_";
         var datep = "date_";
@@ -80,25 +82,26 @@ $(document).ready(function() {
             var date = datep
             var total = 0;
             var tel = 1;
-            $('.date').each(function () {;
+            $('.date').each(function () {
+                ;
                 var datum = document.getElementById(date).value;
-                if(datum.slice(0, 4) > ditjaar - 12){
+                if (datum.slice(0, 4) > ditjaar - 12) {
                     document.getElementById(price).innerHTML = kindP;
                     total += kindB;
-                }else{
+                } else {
                     document.getElementById(price).innerHTML = volP;
                     total += volB;
                 }
-                date = datep.replace('_', '_'+ tel);
-                price = pricep.replace('_', '_'+ tel++);
+                date = datep.replace('_', '_' + tel);
+                price = pricep.replace('_', '_' + tel++);
             });
-            var totalPrice ='€'+ total+ ',-';
+            var totalPrice = '€' + total + ',-';
             $('#totalPrice').html(totalPrice);
         });
     }
 });
 
-function prijs(){
+function prijs() {
     var ditjaar = new Date().getFullYear();
     var kindP = "€5,-";
     var volP = "€10,-";
@@ -116,19 +119,19 @@ function prijs(){
             console.log('test2')
             tel = 1;
             var datum = document.getElementById(date).value;
-            if(datum.slice(0, 4) > ditjaar - 12){
+            if (datum.slice(0, 4) > ditjaar - 12) {
                 document.getElementById(price).innerHTML = kindP;
                 total += 5;
                 console.log('kid')
-            }else{
+            } else {
                 document.getElementById(price).innerHTML = volP;
                 total += 10;
                 console.log('grownup')
             }
-            date = datep.replace('_', '_'+ tel);
-            price = pricep.replace('_', '_'+ tel++);
+            date = datep.replace('_', '_' + tel);
+            price = pricep.replace('_', '_' + tel++);
         });
-        var totalPrice ='€'+ total+ ',-';
+        var totalPrice = '€' + total + ',-';
         $('#totalPrice').html(totalPrice);
     });
 
@@ -136,14 +139,27 @@ function prijs(){
 
 //easter egg
 var EasterCount = 0;
-$( document ).keyup(function(evt) {
+$(document).keyup(function (evt) {
     if (evt.keyCode == "90") {
         EasterCount += 1;
         if (EasterCount == 50) {
             $("#EasterEgg").toggleClass("hidden");
-        } else if (EasterCount == 51){
+        } else if (EasterCount == 51) {
             $("#EasterEgg").toggleClass("hidden");
         }
-    };
+    }
+    ;
 });
 
+$('#message').keyup(function() {
+    var text_value = document.getElementById('message').value;
+
+    if (text_value.includes("Pict21vB is de beste klas") === true && EasterCount == 0) {
+        $("#EasterEgg").toggleClass("hidden");
+        EasterCount ++;
+    } else if (text_value.includes("coderen is soms saai") === true && EasterCount == 0) {
+        document.getElementById("EggImg").src="https://images.unsplash.com/photo-1604488912264-dfed70450d76?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=922";
+        $("#EasterEgg").toggleClass("hidden");
+        EasterCount ++;
+    }
+});

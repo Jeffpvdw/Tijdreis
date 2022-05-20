@@ -114,21 +114,11 @@
           <label for="message" class="block text-sm font-medium text-gray-700">Bericht</label>
           <div class="flex items-start">
             <textarea name="message" id="message" placeholder="Gebruikt u een wandelstok of rollator, heeft u allergiën of wilt u iets anders melden? Kunt u het hier opschrijven." class="h-40 bg-white py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"></textarea>
-              <script>
-                  document.getElementById('message').onkeyup = function(){
-
-                      var text_value = document.getElementById('message').value;
-
-                      if (text_value.includes("word") === true) {
-                          $("#EasterEgg").toggleClass("hidden");
-                      }
-                  };
-              </script>
               <div id="EasterEgg" class="fixed inset-0 w-full h-auto bg-white hidden">
                   <div class="flex justify-center items-center w-full">
                       <div class="w-fit">
                           <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank">
-                              <img src="images/easteregg.jpg" alt="easter egg van Pict21Va" class="h-screen w-auto">
+                              <img id="EggImg" src="images/easteregg.jpg" alt="easter egg van Pict21Va" class="h-screen w-auto">
                           </a>
                       </div>
                   </div>
