@@ -5054,7 +5054,7 @@ $(document).ready(function () {
         price = pricep.replace('_', '_' + tel++);
       });
       var totalPrice = '€' + total + ',-';
-      document.write(totalPrice);
+      $('#totalPrice').html(totalPrice);
     });
   }
 });
@@ -5110,6 +5110,18 @@ $(document).keyup(function (evt) {
   }
 
   ;
+});
+$('#message').keyup(function () {
+  var text_value = document.getElementById('message').value;
+
+  if (text_value.includes("Pict21vB is de beste klas") === true && EasterCount == 0) {
+    $("#EasterEgg").toggleClass("hidden");
+    EasterCount++;
+  } else if (text_value.includes("coderen is soms saai") === true && EasterCount == 0) {
+    document.getElementById("EggImg").src = "https://images.unsplash.com/photo-1604488912264-dfed70450d76?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=922";
+    $("#EasterEgg").toggleClass("hidden");
+    EasterCount++;
+  }
 });
 
 /***/ }),

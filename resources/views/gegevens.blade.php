@@ -34,7 +34,7 @@
           <div class="sm:flex sm:justify-between">
             <select name="tour" class="bg-white py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
               @foreach($tours as $tour)
-              <option value="{{ $tour->id }}">Thema: {{$tour->name}} - {{ strftime('%e %B %Y', strtotime($tour->dateTime)) }} - Nog {{$tour->capacity}} plaatsen beschikbaar.</option>
+              <option value="{{ $tour->id }}">Thema: {{$tour->title}} - {{ strftime('%e %B %Y', strtotime($tour->dateTime)) }} - Nog {{$tour->capacity}} plaatsen beschikbaar.</option>
               @endforeach
             </select>
           </div>
@@ -114,21 +114,11 @@
           <label for="message" class="block text-sm font-medium text-gray-700">Bericht</label>
           <div class="flex items-start">
             <textarea name="message" id="message" placeholder="Gebruikt u een wandelstok of rollator, heeft u allergiën of wilt u iets anders melden? Kunt u het hier opschrijven." class="h-40 bg-white py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"></textarea>
-              <script>
-                  document.getElementById('message').onkeyup = function(){
-
-                      var text_value = document.getElementById('message').value;
-
-                      if (text_value.includes("word") === true) {
-                          $("#EasterEgg").toggleClass("hidden");
-                      }
-                  };
-              </script>
               <div id="EasterEgg" class="fixed inset-0 w-full h-auto bg-white hidden">
                   <div class="flex justify-center items-center w-full">
                       <div class="w-fit">
                           <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank">
-                              <img src="images/easteregg.jpg" alt="easter egg van Pict21Va" class="h-screen w-auto">
+                              <img id="EggImg" src="images/easteregg.jpg" alt="easter egg van Pict21Va" class="h-screen w-auto">
                           </a>
                       </div>
                   </div>
@@ -156,7 +146,7 @@
         </div>
         <div class="divide-y divide-dashed sm:col-span-2">
           <p>Totaal:</p>
-          <p id="totalPrice" name="totalPrice" class="text-3xl font-bold">€10,-</p>
+          <p id="totalPrice" name="totalPrice"></p>
         </div>
         <div class="sm:col-span-2">
           <button type="submit" class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#5b9e8c] hover:bg-opacity-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Ga
