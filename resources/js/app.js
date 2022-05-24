@@ -37,7 +37,7 @@ $(document).ready(function() {
         $("#cat").toggleClass("hidden");
         setTimeout(function() {
             $("#cat").toggleClass("hidden");
-        }, 1250)
+        }, 1000)
     });
 
     // AddPerson
