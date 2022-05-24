@@ -40,28 +40,42 @@
     <div class="relative px-4 lg:w-8/12 sm:w-5/6 m-auto sm:px-6 lg:px-8">
         <div class="text-lg max-w-prose mx-auto">
             <h1>
-                <span
-                    class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">De tour</span>
+                <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">De tour</span>
             </h1>
-            <p class="mt-4 text-lg text-gray-500">Er is een bekende en wijze uitspraak die zegt:</p>
-            <blockquote class="mt-4 text-lg text-center text-gray-500">“Je moet het <u>verleden</u>
-                kennen om het
-                <u>heden</u> te begrijpen,
-                en om er voor de <u>toekomst</u> van te leren”.
-            </blockquote>
-            <p class="mt-4 text-lg text-gray-500">Dat wil de Historische Vereniging Hardenberg e.o. op
-                een nieuwe manier in de praktijk
-                brengen door middel van thematische Tijdreizen. Het zijn interessante excursies langs
-                bijzondere locaties met daarbij geschiedkundige informatie en mooie verhalen. Hierdoor
-                krijgt een deelnemer een goed beeld van de geschiedenis rond het betreffende thema. En
-                waar mogelijk wordt er ook vooruit gekeken in de tijd: Wat doen we met de ervaringen uit
-                het verleden? </p>
-        </div>
-        <div class="sm:grid">
-            <div class="block justify-center flex flex-wrap pb-4 mt-5">
-                <img class="w-80 lg:ml-10 pb-4" src="images/Happypeople.jpg" alt="" width="450" height="250">
-                <img class="w-80 lg:ml-10 pb-4" src="images/hardenberg.jpg" alt="" width="450" height="250">
-                <img class="w-80 lg:ml-10 pb-4" src="images/windmill2.jpg" alt="" width="450" height="250">
+            <div class="mt-8 text-xl text-gray-500 leading-8">
+                <p class="text-center">De eerste Tijdreis-Hardenberg zou er als volgt uit kunnen zien:</p><br><br>
+
+                <img class="w-80 md:float-right m-auto" src="images/windmill2.jpg" alt="" width="450" height="250">
+                De reis begint in Hardenberg aan het Molenplein bij de Oelemölle. Een windmolen is een prachtig vertrekpunt voor deze Tijdreis, 
+                want wind was immers één van de eerste energiebronnen die in het verre verleden al gebruikt werd.<br><br>
+
+                We volgen min of meer de loop van de Vecht en komen zo in Mariënberg. Daar rijden we het gebied in waar veen is afgegraven. 
+                De vaarten (wijken) en sloten voor de afvoer van turf en oppervlaktewater zijn nu nog zichtbaar. 
+                De boerderijen die er direct na de turfwinning gesticht zijn, zijn verdwenen. Door ruilverkaveling zijn grotere hedendaagse agrarische bedrijven gevormd. 
+                Slechts hier en daar is nog wat bebouwing uit oude tijden te zien.<br><br>
+
+                In Sibculo rijden we verder over de weg die over de grens van het nog aanwezige hoogveen (Engbertsdijkvenen) en het afgegraven gebied loopt. 
+                Zo komen we bij het Veenmuseum en krijgen daar een excursie en gaan terug naar het leven en werken in de tijd van de “vervening”.<br><br>
+
+                <img class="w-80 md:float-left m-auto" src="images/Happypeople.jpg" alt="" width="450" height="250">
+                Na dit bezoek rijden we naar Kloosterhaar. Daar gaat de Tijdreis even van Verleden naar het Heden. 
+                We passeren namelijk één van de allergrootste drijvende zonneparken van Nederland. 
+                In een oude zandwinplas drijven ruim 40.000 panelen die stroom produceren voor 4.300 huishoudens.<br><br>
+
+                Dan door naar Hardenberg. De tijdreis komt nu op de grens van Heden en Toekomst. Hier staat een moderne Biogasinstallatie. 
+                In de installatie worden mest en restproducten doormiddel van anaerobe vergisting omgezet in biogas. 
+                Van dit biogas wordt groene stroom en warmte gemaakt.<br><br>
+
+                ..................  nader te bepalen    .................. <br><br>
+
+                ..................  nader te bepalen    ..................<br><br>
+
+                In Lutten bezoeken we energiecoöperatie “Lutten Levert”. 
+                De doelstelling van Lutten Levert is: duurzaam zonne-energie opwekken voor de bewoners van Lutten en omstreken, naar behoefte van de gemeenschap. 
+                Het initiatief van de energiecoöperatie Lutten Levert is één van de vijf pilotprojecten in de gemeente Hardenberg voor het opwekken van duurzame energie.<br><br>
+
+                Dan weer terug naar Hardenberg. We verkeerden een middag in andere tijden. Nu weer terug naar de onze!
+                <img class="w-80 m-auto pt-8" src="images/hardenberg.jpg" alt="" width="450" height="250">
             </div>
         </div>
     </div>
