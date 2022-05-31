@@ -93,7 +93,7 @@ $(document).ready(function() {
                 price = pricep.replace('_', '_'+ tel++);
             });
             var totalPrice ='€'+ total+ ',-';
-            document.write(totalPrice);
+            $('#totalPrice').html(totalPrice);
         });
     }
 });
