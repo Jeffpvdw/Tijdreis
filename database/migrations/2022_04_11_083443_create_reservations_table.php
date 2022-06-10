@@ -16,9 +16,11 @@ class CreateReservationsTable extends Migration
         Schema::create('reservations', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('tour_id')->nullable();
+            $table->string('name');
             $table->string('email', 64);
             $table->string('phone');
             $table->text('comment')->nullable();
+            $table->string('price');
             $table->timestamps();
 
             $table->foreign('tour_id')->references('id')->on('tours');
