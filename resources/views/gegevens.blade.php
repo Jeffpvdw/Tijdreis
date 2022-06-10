@@ -27,7 +27,7 @@
       <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Persoonlijke gegevens</h2>
     </div>
     <div class="mt-12">
-      <form action="{{ route('confirmOrder') }}" method="post" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+      <form action="{{ route('orderController') }}" method="post" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
         @csrf
         <div class="sm:col-span-2">
           <label for="company" class="block text-sm font-medium text-gray-700">Datum selecteren tour</label>
@@ -49,7 +49,7 @@
           <label for="phonenumber" class="block text-sm font-medium text-gray-700">Telefoonnummer</label>
 
           <div class="mt-1">
-            <input type="text" name="telefoonnumer" id="telefoonnummer" autocomplete="organization" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="0612345678" maxlength="10" minlength="10" pattern="[0-9]+" required>
+            <input type="text" name="phone" id="telefoonnummer" autocomplete="organization" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="0612345678" maxlength="10" minlength="10" pattern="[0-9]+" required>
           </div>
 
         </div>
@@ -65,7 +65,7 @@
               <div>
                 <label for="first-name" class="block text-sm font-medium text-gray-700">Voornaam</label>
                 <div class="mt-1">
-                  <input type="text" name="firstName_" id="first-name_" autocomplete="given-name" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Jan" required>
+                  <input type="text" name="firstName" id="first-name_" autocomplete="given-name" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Jan" required>
                 </div>
               </div>
               <div class="mt-5 sm:mt-0">
@@ -77,7 +77,7 @@
               <div class="mt-5 sm:mt-0">
                 <label for="last-name" class="block text-sm font-medium text-gray-700">Achternaam</label>
                 <div class="mt-1">
-                  <input type="text" name="lastName_" id="last-name_" autocomplete="family-name" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Timmer" required>
+                  <input type="text" name="lastName" id="last-name_" autocomplete="family-name" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Timmer" required>
                 </div>
               </div>
             </div>
@@ -146,7 +146,7 @@
         </div>
         <div class="divide-y divide-dashed sm:col-span-2">
           <p>Totaal:</p>
-          <p id="totalPrice" name="totalPrice"></p>
+          <input id="totalPrice" name="totalPrice">
         </div>
         <div class="sm:col-span-2">
           <button type="submit" class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#5b9e8c] hover:bg-opacity-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Ga

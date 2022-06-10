@@ -85,3 +85,5 @@ Route::get('/mail', function () {
 Route::post('/confirmorder', [\App\Http\Controllers\ConfirmOrderController::class, 'sendMail'] )->name('confirmOrder');
 
 Route::post('/contactform', [\App\Http\Controllers\ContactController::class, 'sendMail'] )->name('contactForm');
+
+Route::post('/orderController', [\App\Http\Controllers\OrderController::class, 'post'] )->name('orderController');

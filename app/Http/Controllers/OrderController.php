@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Reservation;
 use App\Models\Tour;
 use App\Models\Theme;
 use Illuminate\Support\Facades\DB;
@@ -24,5 +25,17 @@ class OrderController extends Controller
 SQL);
         
         return view('gegevens', ['tours' => $tours]);
+    }
+
+    public function post(Request $request)
+    {
+        $reservation = new Reservation();
+        $reservation->tour_id = $request->tour;
+        $reservation->name = $request->lastName;
+        $reservation->email = $request->user_mail;
+        $reservation->phone = $request->phone;
+        $reservation->comment = $request->message;
+        $reservation->price = $request->totalPrice;
+        $reservation->save();
     }
 }
