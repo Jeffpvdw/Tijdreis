@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
+use App\Models\Reservation;
 use Illuminate\Http\Request;
 use App\Models\Tour;
 use App\Models\Theme;
@@ -16,13 +18,24 @@ class OrderController extends Controller
         $tours = DB::select(<<<SQL
         SELECT `t`.`id`, `th`.`title`, `t`.`dateTime`, (`t`.`capacity` - COUNT(`p`.`id`)) AS `capacity`
         FROM `tours` `t`
-        JOIN `themes` `th` ON `t`.`theme_id` = `th`.`id`
-        JOIN `reservations` `r` ON `r`.`tour_id` = `t`.`id`
-        JOIN `participants` `p` ON `p`.`reservation_id` = `r`.`id`
+        LEFT JOIN `themes` `th` ON `t`.`theme_id` = `th`.`id`
+        LEFT JOIN `reservations` `r` ON `r`.`tour_id` = `t`.`id`
+        LEFT JOIN `participants` `p` ON `p`.`reservation_id` = `r`.`id`
         WHERE `t`.`dateTime` > NOW()
         GROUP BY `r`.`tour_id`
 SQL);
 
         return view('gegevens', ['tours' => $tours]);
+    }
+
+    public function post(Request $request)
+    {
+
+        $reservation = new Reservation();
+        $reservation->tour_id = $request->tour;
+        $reservation->email = $request->user_mail;
+        $reservation->phone = $request->phone;
+        $reservation->comment = $request->message;
+        $reservation->save();
     }
 }

@@ -87,3 +87,6 @@ Route::post('/confirmorder', [\App\Http\Controllers\ConfirmOrderController::clas
 Route::post('/contactform', [\App\Http\Controllers\ContactController::class, 'sendMail'] )->name('contactForm');
 
 Route::get('/clear-unpaid-reservations', [\App\Http\Controllers\ClearUnpaidController::class, 'check']);
+
+Route::post('/orderModel', [\App\Http\Controllers\OrderController::class, 'post'] )->name('orderModel');
+

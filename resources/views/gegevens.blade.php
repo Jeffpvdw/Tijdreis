@@ -27,14 +27,14 @@
       <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Persoonlijke gegevens</h2>
     </div>
     <div class="mt-12">
-      <form action="{{ route('confirmOrder') }}" method="post" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+      <form action="{{ route('orderModel') }}" method="post" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
         @csrf
         <div class="sm:col-span-2">
           <label for="company" class="block text-sm font-medium text-gray-700">Datum selecteren tour</label>
           <div class="sm:flex sm:justify-between">
             <select name="tour" class="bg-white py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
               @foreach($tours as $tour)
-              <option value="{{ $tour->id }}">Thema: {{$tour->name}} - {{ strftime('%e %B %Y', strtotime($tour->dateTime)) }} - Nog {{$tour->capacity}} plaatsen beschikbaar.</option>
+              <option value="{{ $tour->id }}">Thema: {{$tour->title}} - {{ strftime('%e %B %Y', strtotime($tour->dateTime)) }} - Nog {{$tour->capacity}} plaatsen beschikbaar.</option>
               @endforeach
             </select>
           </div>
@@ -49,7 +49,7 @@
           <label for="phonenumber" class="block text-sm font-medium text-gray-700">Telefoonnummer</label>
 
           <div class="mt-1">
-            <input type="text" name="telefoonnumer" id="telefoonnummer" autocomplete="organization" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="0612345678" maxlength="10" minlength="10" pattern="[0-9]+" required>
+            <input type="text" name="phone" id="telefoonnummer" autocomplete="organization" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="0612345678" maxlength="10" minlength="10" pattern="[0-9]+" required>
           </div>
 
         </div>
@@ -65,7 +65,7 @@
               <div>
                 <label for="first-name" class="block text-sm font-medium text-gray-700">Voornaam</label>
                 <div class="mt-1">
-                  <input type="text" name="firstName_" id="first-name_" autocomplete="given-name" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Jan" required>
+                  <input type="text" name="firstName" id="first-name_" autocomplete="given-name" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Jan" required>
                 </div>
               </div>
               <div class="mt-5 sm:mt-0">
@@ -77,7 +77,7 @@
               <div class="mt-5 sm:mt-0">
                 <label for="last-name" class="block text-sm font-medium text-gray-700">Achternaam</label>
                 <div class="mt-1">
-                  <input type="text" name="lastName_" id="last-name_" autocomplete="family-name" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Timmer" required>
+                  <input type="text" name="lastName" id="last-name_" autocomplete="family-name" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Timmer" required>
                 </div>
               </div>
             </div>
