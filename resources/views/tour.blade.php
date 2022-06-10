@@ -45,7 +45,7 @@
             <div class="mt-8 text-xl text-gray-500 leading-8">
                 <p class="text-center">De eerste Tijdreis-Hardenberg zou er als volgt uit kunnen zien:</p><br><br>
 
-                <img class="w-80 md:float-right m-auto" src="images/windmill2.jpg" alt="" width="450" height="250">
+                <img class="w-80 md:float-right m-auto mb:mb-0 md:mt-2 md:ml-2 mb-4" src="images/windmill2.jpg" alt="" width="450" height="250">
                 De reis begint in Hardenberg aan het Molenplein bij de Oelemölle. Een windmolen is een prachtig vertrekpunt voor deze Tijdreis, 
                 want wind was immers één van de eerste energiebronnen die in het verre verleden al gebruikt werd.<br><br>
 
@@ -57,7 +57,7 @@
                 In Sibculo rijden we verder over de weg die over de grens van het nog aanwezige hoogveen (Engbertsdijkvenen) en het afgegraven gebied loopt. 
                 Zo komen we bij het Veenmuseum en krijgen daar een excursie en gaan terug naar het leven en werken in de tijd van de “vervening”.<br><br>
 
-                <img class="w-80 md:float-left m-auto" src="images/Happypeople.jpg" alt="" width="450" height="250">
+                <img class="w-80 md:float-left m-auto md:mb-0 md:mt-2 md:mr-2 mb-4" src="images/Happypeople.jpg" alt="" width="450" height="250">
                 Na dit bezoek rijden we naar Kloosterhaar. Daar gaat de Tijdreis even van Verleden naar het Heden. 
                 We passeren namelijk één van de allergrootste drijvende zonneparken van Nederland. 
                 In een oude zandwinplas drijven ruim 40.000 panelen die stroom produceren voor 4.300 huishoudens.<br><br>
