@@ -35,7 +35,6 @@ SQL);
         $reservation->email = $request->user_mail;
         $reservation->phone = $request->phone;
         $reservation->comment = $request->message;
-        $reservation->price = $request->totalPrice;
         $reservation->save();
     }
 }
