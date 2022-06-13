@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Reservation;
+use App\Models\Participant;
 use App\Models\Tour;
 use App\Models\Theme;
 use Illuminate\Support\Facades\DB;
@@ -31,10 +32,21 @@ SQL);
     {
         $reservation = new Reservation();
         $reservation->tour_id = $request->tour;
-        $reservation->name = $request->lastName_;
         $reservation->email = $request->user_mail;
         $reservation->phone = $request->phone;
         $reservation->comment = $request->message;
-        $reservation->save();
-    }
+        $reservation->save();        
+
+
+        foreach($request->participant as $id => $person) {
+            $participant = new Participant();
+            $participant->reservation_id = $reservation->id;
+            $participant->firstname = $person['firstName'];
+            $participant->preposition = $person['proposition'];
+            $participant->lastname = $person['lastName'];
+            $participant->birth_date = $person['date'];
+            $participant->save(); 
+        }
+
+    }      
 }
