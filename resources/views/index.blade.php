@@ -162,7 +162,7 @@
                 daarbij de locaties die aan de orde komen
                 tijdens de rit of in het routeboekje.<br><br>
                 De route kan ook als fietsroute gedownload worden.
-                <a href="" class="inline-flex bg-[#5b9e8c] bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:bg-opacity-70">klik hier</a> U kunt dan op eigen gelegenheid langs de
+                <a href="images/Route_Fietsen.pdf" class="inline-flex bg-[#5b9e8c] bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:bg-opacity-70" download>klik hier</a> U kunt dan op eigen gelegenheid langs de
                 locaties fietsen. Het Veenmuseum kunt u bezoeken maar op de andere locaties mist u dan de rondleidingen
                 en
                 verdere achtergrondinformatie. </p>
