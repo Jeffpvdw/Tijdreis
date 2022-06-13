@@ -31,7 +31,7 @@ SQL);
     {
         $reservation = new Reservation();
         $reservation->tour_id = $request->tour;
-        $reservation->name = $request->lastName;
+        $reservation->name = $request->lastName_;
         $reservation->email = $request->user_mail;
         $reservation->phone = $request->phone;
         $reservation->comment = $request->message;

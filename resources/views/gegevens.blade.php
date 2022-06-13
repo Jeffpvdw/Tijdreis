@@ -65,7 +65,7 @@
               <div>
                 <label for="first-name" class="block text-sm font-medium text-gray-700">Voornaam</label>
                 <div class="mt-1">
-                  <input type="text" name="firstName" id="first-name_" autocomplete="given-name" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Jan" required>
+                  <input type="text" name="firstName_" id="first-name_" autocomplete="given-name" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Jan" required>
                 </div>
               </div>
               <div class="mt-5 sm:mt-0">
@@ -77,7 +77,7 @@
               <div class="mt-5 sm:mt-0">
                 <label for="last-name" class="block text-sm font-medium text-gray-700">Achternaam</label>
                 <div class="mt-1">
-                  <input type="text" name="lastName" id="last-name_" autocomplete="family-name" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Timmer" required>
+                  <input type="text" name="lastName_" id="last-name_" autocomplete="family-name" class="py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Timmer" required>
                 </div>
               </div>
             </div>
