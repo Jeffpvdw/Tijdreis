@@ -20,7 +20,6 @@ class CreateReservationsTable extends Migration
             $table->string('email', 64);
             $table->string('phone');
             $table->text('comment')->nullable();
-            $table->string('price');
             $table->timestamps();
 
             $table->foreign('tour_id')->references('id')->on('tours');
