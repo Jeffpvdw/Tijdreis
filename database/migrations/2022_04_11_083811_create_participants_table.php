@@ -19,6 +19,7 @@ class CreateParticipantsTable extends Migration
             $table->string('firstname', 64);
             $table->string('preposition', 16)->nullable();
             $table->string('lastname', 64);
+            $table->date('birth_date');
             $table->timestamps();
 
             $table->foreign('reservation_id')->references('id')->on('reservations');
