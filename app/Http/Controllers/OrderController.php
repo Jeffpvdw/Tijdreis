@@ -24,7 +24,7 @@ class OrderController extends Controller
         WHERE `t`.`dateTime` > NOW()
         GROUP BY `r`.`tour_id`
 SQL);
-        
+
         return view('gegevens', ['tours' => $tours]);
     }
 
@@ -35,9 +35,11 @@ SQL);
         $reservation->email = $request->user_mail;
         $reservation->phone = $request->phone;
         $reservation->comment = $request->message;
-        $reservation->save();        
+        $reservation->save();
 
         foreach($request->participant as $id => $person) {
+            $Date = $participant[$id]->birth_date = $person['date'];
+            dd($Date);
             $participant[$id] = new Participant();
             $participant[$id]->reservation_id = $reservation->id;
             $participant[$id]->firstname = $person['firstName'];
@@ -45,8 +47,8 @@ SQL);
             $participant[$id]->lastname = $person['lastName'];
             $participant[$id]->birth_date = $person['date'];
             dd($person);
-            $participant[$id]->save(); 
+            $participant[$id]->save();
         }
 
-    }      
+    }
 }
