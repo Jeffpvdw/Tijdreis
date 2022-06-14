@@ -37,15 +37,15 @@ SQL);
         $reservation->comment = $request->message;
         $reservation->save();        
 
-
         foreach($request->participant as $id => $person) {
-            $participant = new Participant();
-            $participant->reservation_id = $reservation->id;
-            $participant->firstname = $person['firstName'];
-            $participant->preposition = $person['proposition'];
-            $participant->lastname = $person['lastName'];
-            $participant->birth_date = $person['date'];
-            $participant->save(); 
+            $participant[$id] = new Participant();
+            $participant[$id]->reservation_id = $reservation->id;
+            $participant[$id]->firstname = $person['firstName'];
+            $participant[$id]->preposition = $person['proposition'];
+            $participant[$id]->lastname = $person['lastName'];
+            $participant[$id]->birth_date = $person['date'];
+            dd($person);
+            $participant[$id]->save(); 
         }
 
     }      

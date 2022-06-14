@@ -4997,7 +4997,7 @@ $(document).ready(function () {
     $("#cat").toggleClass("hidden");
     setTimeout(function () {
       $("#cat").toggleClass("hidden");
-    }, 1250);
+    }, 1000);
   }); // AddPerson
 
   var cloneCount = 1;
@@ -5017,7 +5017,7 @@ $(document).ready(function () {
   $('#ep').click(function (e) {
     e.preventDefault();
     var element = $('#copy');
-    $("#container").append(element.html().replaceAll('_', '_' + cloneCount++));
+    $("#container").append(element.html().replaceAll('[0]', '[' + cloneCount++ + ']'));
     prijs();
     $(".date").trigger("change");
   });
@@ -5050,8 +5050,8 @@ $(document).ready(function () {
           total += volB;
         }
 
-        date = datep.replace('_', '_' + tel);
-        price = pricep.replace('_', '_' + tel++);
+        date = datep.replace('[0]', '[' + tel + ']');
+        price = pricep.replace('[0]', '[' + tel++ + ']');
       });
       var totalPrice = '€' + total + ',-';
       $('#totalPrice').html(totalPrice);
@@ -5087,8 +5087,8 @@ function prijs() {
         console.log('grownup');
       }
 
-      date = datep.replace('_', '_' + tel);
-      price = pricep.replace('_', '_' + tel++);
+      date = datep.replace('[0]', '[' + tel + ']');
+      price = pricep.replace('[0]', '[' + tel++ + ']');
     });
     var totalPrice = '€' + total + ',-';
     $('#totalPrice').html(totalPrice);
