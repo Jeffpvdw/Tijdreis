@@ -30,7 +30,7 @@ class PrintListController extends Controller
         JOIN `reservations` `r` ON
             `p`.`reservation_id` = `r`.`id`
         WHERE
-            `r`.`tour_id` = ' . $request->tour_id, [1]);
+            `r`.`tour_id` = ' . $request->tour_id);
 
             return view('print')->with([
                 'tour' => $tour

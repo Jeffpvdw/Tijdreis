@@ -25,6 +25,7 @@
         </div>
         {{csrf_field()}}
     </form>
+    @if (isset($tour))
     <button id='print' class="rounded bg-[#5b9e8c] hover:bg-[#3e8270] hover:shadow-md p-2 border-2 mt-4 m-auto text-white font-semibold text-center">
         Print deze pagina
     </button>
@@ -42,26 +43,25 @@
         </tr>
         </thead>
         <tbody>
-        <tr class="border-b-4 border-black">
-{{--                                    @foreach ($tour as $item)--}}
-            <td class="text-center border border-slate-300">Jan</td>
-            <td class="text-center border border-slate-300">De</td>
-            <td class="text-center border border-slate-300">Vries</td>
-            <td class="text-center border border-slate-300">Gisteren</td>
-            <td class="text-center border border-slate-300">1234 AB</td>
-            <td class="text-center border border-slate-300">Help ik heb een zware noten allergie en ik gebruik een
-                rollator om te lopen
-            </td>
+        <tr>
+        @foreach ($tour as $item)
+            <td class="text-center border border-slate-300">{{$item->firstname}}</td>
+            <td class="text-center border border-slate-300">{{$item->preposition}}</td>
+            <td class="text-center border border-slate-300">{{$item->lastname}}</td>
+            <td class="text-center border border-slate-300">{{$item->birthdate}}</td>
+            <td class="text-center border border-slate-300">{{$item->zipcode}}</td>
+            <td class="text-center border border-slate-300">{{$item->comment}}</td>
         </tr>
-{{--                                @endforeach--}}
+        @endforeach
+        <tr class="border-b-4 border-black">
+        </tr>
         </tbody>
     </table>
 </div>
 <div class="w-full text-center">
-
-{{--            @else--}}
-    <h1>Er is geen tour ID ingevuld</h1>
-{{--            @endif--}}
+    @else
+        <h1>Er is geen tour ID ingevuld</h1>
+    @endif
 </div>
 
 
