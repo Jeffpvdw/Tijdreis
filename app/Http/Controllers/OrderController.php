@@ -38,15 +38,12 @@ SQL);
         $reservation->save();
 
         foreach($request->participant as $id => $person) {
-            $Date = $participant[$id]->birth_date = $person['date'];
-            dd($Date);
             $participant[$id] = new Participant();
             $participant[$id]->reservation_id = $reservation->id;
             $participant[$id]->firstname = $person['firstName'];
             $participant[$id]->preposition = $person['proposition'];
             $participant[$id]->lastname = $person['lastName'];
-            $participant[$id]->birth_date = $person['date'];
-            dd($person);
+            $participant[$id]->birth_date = $person['date'].'-01';
             $participant[$id]->save();
         }
 
