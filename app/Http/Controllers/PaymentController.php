@@ -3,7 +3,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Reservation;
 use App\Models\User;
 
 class PaymentController
@@ -11,7 +10,7 @@ class PaymentController
 
     public function testPayment()
     {
-        $user = Reservation::find(4);
+        $user = User::find(1);
 
         $item = new \Laravel\Cashier\Charge\ChargeItemBuilder($user);
         $item->unitPrice(money(20000, 'EUR')); //1 EUR
