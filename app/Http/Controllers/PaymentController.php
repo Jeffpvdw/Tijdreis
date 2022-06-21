@@ -10,7 +10,7 @@ class PaymentController
 
     public function testPayment()
     {
-        $user = User::find(jim);
+        $user = User::find(1);
 
         $item = new \Laravel\Cashier\Charge\ChargeItemBuilder($user);
         $item->unitPrice(money(20000, 'EUR')); //1 EUR
