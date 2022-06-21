@@ -87,3 +87,5 @@ Route::post('/confirmorder', [\App\Http\Controllers\ConfirmOrderController::clas
 Route::post('/contactform', [\App\Http\Controllers\ContactController::class, 'sendMail'] )->name('contactForm');
 
 Route::post('/orderController', [\App\Http\Controllers\OrderController::class, 'post'] )->name('orderController');
+
+Route::post('/PaymentController', [\App\Http\Controller\PaymentController::class , 'testPayment'])->name('PaymentController');
