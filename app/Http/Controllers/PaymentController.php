@@ -3,14 +3,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Participant;
+use App\Models\Reservation;
 use App\Models\User;
 
 class PaymentController
 {
 
-    public function testPayment()
+    public function testPayment(int $reservationId)
     {
-        $user = User::find();
+        $reservation = Reservation::find($reservationId);
+        $participants = Participant::where(['reservation_id' => $reservationId])->get();
+
+        dd($participants);
 
         $item = new \Laravel\Cashier\Charge\ChargeItemBuilder($user);
         $item->unitPrice(money(20000, 'EUR')); //1 EUR

@@ -47,6 +47,6 @@ class OrderController extends Controller
             $participant[$id]->birth_date = $person['date'].'-01';
             $participant[$id]->save();
         }
-
+        return redirect()->route('PaymentController', ['reservation' => $participant[$id]->reservation_id]);
     }
 }
