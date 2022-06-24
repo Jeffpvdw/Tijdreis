@@ -27,7 +27,7 @@ class PaymentController
         $item2->description('Test Item 4');
         $chargeItem2 = $item2->make();
 
-        $result = $participants->newCharge()
+        $result = $user->newCharge()
             ->addItem($chargeItem)
             ->addItem($chargeItem2)
             ->setRedirectUrl('https://jimvogelzang.icthardenberg.nl/mollie.nl')
