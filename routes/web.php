@@ -88,4 +88,4 @@ Route::post('/contactform', [\App\Http\Controllers\ContactController::class, 'se
 
 Route::post('/orderController', [\App\Http\Controllers\OrderController::class, 'post'] )->name('orderController');
 
-Route::get('/Mollie/{reservation}', [\App\Http\Controllers\PaymentController::class , 'testPayment'])->name('PaymentController');
+Route::get('/PaymentController/{reservation}', [\App\Http\Controllers\PaymentController::class , 'testPayment'])->name('PaymentController');
