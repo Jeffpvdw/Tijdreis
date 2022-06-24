@@ -12,8 +12,8 @@ class PaymentController
 
     public function testPayment(int $reservationId)
     {
-        $participants = Participant::where(['reservation_id' => $reservationId])->get();
-        $user = Reservation::find($reservationId);
+        $user = Participant::where(['reservation_id' => $reservationId])->get();
+        $reservation = Reservation::find($reservationId);
 
 
 
