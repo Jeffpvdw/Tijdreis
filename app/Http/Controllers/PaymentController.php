@@ -12,10 +12,10 @@ class PaymentController
 
     public function testPayment(int $reservationId)
     {
-        $reservation = Reservation::find($reservationId);
         $participants = Participant::where(['reservation_id' => $reservationId])->get();
+        $reservation = Reservation::find($reservationId);
 
-        dd($participants);
+      
 
         $item = new \Laravel\Cashier\Charge\ChargeItemBuilder($user);
         $item->unitPrice(money(20000, 'EUR')); //1 EUR
