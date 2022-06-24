@@ -30,6 +30,7 @@ class PaymentController
         $result = $participants->newCharge()
             ->addItem($chargeItem)
             ->addItem($chargeItem2)
+            ->setRedirectUrl('https://jimvogelzang.icthardenberg.nl/mollie.nl')
             ->create();
 
         if (is_a($result, \Laravel\Cashier\Http\RedirectToCheckoutResponse::class)) {
