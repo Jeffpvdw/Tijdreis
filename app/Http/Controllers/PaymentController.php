@@ -15,7 +15,7 @@ class PaymentController
         $participants = Participant::where(['reservation_id' => $reservationId])->get();
         $reservation = Reservation::find($reservationId);
 
-        dd($participants);
+      
 
         $item = new \Laravel\Cashier\Charge\ChargeItemBuilder($user);
         $item->unitPrice(money(20000, 'EUR')); //1 EUR
