@@ -15,7 +15,7 @@ class PaymentController
         $participant = Participant::where(['reservation_id' => $reservationId])->get();
         $reservation = Reservation::find($reservationId);
 
-        $user = $reservation->id);
+        $user = $reservation->id;
 
 
 
