@@ -12,10 +12,11 @@ class PaymentController
 
     public function testPayment(int $reservationId)
     {
-        $user = Participant::where(['reservation_id' => $reservationId])->get();
+        $participant = Participant::where(['reservation_id' => $reservationId])->get();
         $reservation = Reservation::find($reservationId);
 
-        dd($reservation->id);
+        $user = $reservation->id);
+
 
 
         $item = new \Laravel\Cashier\Charge\ChargeItemBuilder($user);
