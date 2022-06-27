@@ -25,6 +25,10 @@ class Reservation extends Model
     // protected $hidden = [];
     // protected $dates = [];
 
+    public function taxPercentage() {
+        return 21;
+    }
+
     /*
     |--------------------------------------------------------------------------
     | FUNCTIONS

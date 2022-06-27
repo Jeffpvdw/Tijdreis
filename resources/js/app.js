@@ -76,7 +76,7 @@ $(document).ready(function () {
         var volP = "€" + volB + ",-";
         var tel = 1;
         var pricep = "price_";
-        var datep = "date_";
+        var datep = "participant[0][date]";
         $('.date').change(function prijsC() {
             var price = pricep;
             var date = datep
