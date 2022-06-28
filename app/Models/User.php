@@ -11,7 +11,6 @@ use Laravel\Sanctum\HasApiTokens;
 use Laravel\Cashier\Cashier;
 
 
-
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable, Billable;
@@ -45,14 +44,17 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    public function mollieCustomerFields() {
+
+    public function mollieCustomerFields()
+    {
         return [
             'email' => $this->email,
             'name' => $this->name,
         ];
     }
 
-    public function taxPercentage() {
+    public function taxPercentage()
+    {
         return 20;
     }
 }

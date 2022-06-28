@@ -37,10 +37,13 @@ class Participant extends Model
     |--------------------------------------------------------------------------
     */
 
-    public function participants(){
+    public function participants()
+    {
         return $this->belongsTo(Reservation::class, 'reservation_id', 'id');
     }
-    public function statisticsName(){
+
+    public function statisticsName()
+    {
         return $this->hasMany(Statistic::class);
     }
 

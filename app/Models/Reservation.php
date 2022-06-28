@@ -6,6 +6,7 @@ use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Tour;
 use App\Models\Participant;
+use Laravel\Cashier\Billable;
 
 class Reservation extends Model
 {
@@ -16,7 +17,6 @@ class Reservation extends Model
     | GLOBAL VARIABLES
     |--------------------------------------------------------------------------
     */
-
     protected $table = 'reservations';
     // protected $primaryKey = 'id';
     // public $timestamps = false;
@@ -25,7 +25,8 @@ class Reservation extends Model
     // protected $hidden = [];
     // protected $dates = [];
 
-    public function taxPercentage() {
+    public function taxPercentage()
+    {
         return 21;
     }
 
@@ -41,12 +42,22 @@ class Reservation extends Model
     |--------------------------------------------------------------------------
     */
 
-    public function reservations(){
+    public function reservations()
+    {
         return $this->belongsTo(Tour::class, 'tour_id', 'id');
     }
 
-    public function participants(){
+    public function participants()
+    {
         return $this->hasMany(Participant::class);
+    }
+
+    public function mollieCustomerFields()
+    {
+        return [
+            'email' => $this->email,
+            'name' => $this->name,
+        ];
     }
 
     /*

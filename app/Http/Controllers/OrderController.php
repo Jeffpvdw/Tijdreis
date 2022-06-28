@@ -24,7 +24,8 @@ class OrderController extends Controller
             LEFT JOIN `participants` `p` ON `p`.`reservation_id` = `r`.`id`
             WHERE `t`.`dateTime` > NOW()
             GROUP BY `r`.`tour_id`
-        SQL);
+        SQL
+        );
 
         return view('gegevens', ['tours' => $tours]);
     }
@@ -38,13 +39,13 @@ class OrderController extends Controller
         $reservation->comment = $request->message;
         $reservation->save();
 
-        foreach($request->participant as $id => $person) {
+        foreach ($request->participant as $id => $person) {
             $participant[$id] = new Participant();
             $participant[$id]->reservation_id = $reservation->id;
             $participant[$id]->firstname = $person['firstName'];
             $participant[$id]->preposition = $person['proposition'];
             $participant[$id]->lastname = $person['lastName'];
-            $participant[$id]->birth_date = $person['date'].'-01';
+            $participant[$id]->birth_date = $person['date'] . '-01';
             $participant[$id]->save();
         }
         return redirect()->route('PaymentController', ['reservation' => $participant[$id]->reservation_id]);
