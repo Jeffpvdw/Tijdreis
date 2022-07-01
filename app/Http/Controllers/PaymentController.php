@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Participant;
 use App\Models\Reservation;
-use App\Models\User;
+use App\Models\Reservation;
 
 class PaymentController
 {
