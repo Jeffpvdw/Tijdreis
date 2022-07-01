@@ -10,7 +10,7 @@ use Laravel\Cashier\Billable;
 
 class Reservation extends Model
 {
-    use CrudTrait;
+    use CrudTrait, Billable;
 
     /*
     |--------------------------------------------------------------------------
