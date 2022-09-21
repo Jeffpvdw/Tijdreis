@@ -33,8 +33,8 @@
           <label for="company" class="block text-sm font-medium text-gray-700">Datum selecteren tour</label>
           <div class="sm:flex sm:justify-between">
             <select name="tour" class="bg-white py-3 px-4 block w-full shadow-md focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
-              @foreach($tours as $tour)
-              <option value="{{ $tour->id }}">Thema: {{$tour->title}} - {{ strftime('%e %B %Y', strtotime($tour->dateTime)) }} - Nog {{$tour->capacity}} plaatsen beschikbaar.</option>
+            @foreach($tours as $tour)
+              <option value="{{ $tour->id }}">Thema: {{$tour->themes->title}} {{$tour->title}} - {{ strftime('%e %B %Y', strtotime($tour->dateTime)) }} - Nog {{$tour->capacity}} plaatsen beschikbaar.</option>
               @endforeach
             </select>
           </div>

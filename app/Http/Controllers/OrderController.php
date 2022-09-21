@@ -15,16 +15,10 @@ class OrderController extends Controller
 {
 
     public function get()
-    {
-        $tours = DB::select(<<<SQL
-            SELECT `t`.`id`, `th`.`title`, `t`.`dateTime`, (`t`.`capacity` - COUNT(`p`.`id`)) AS `capacity`
-            FROM `tours` `t`
-            LEFT JOIN `themes` `th` ON `t`.`theme_id` = `th`.`id`
-            LEFT JOIN `reservations` `r` ON `r`.`tour_id` = `t`.`id`
-            LEFT JOIN `participants` `p` ON `p`.`reservation_id` = `r`.`id`
-            WHERE `t`.`dateTime` > NOW()
-            GROUP BY `r`.`tour_id`
-        SQL);
+    {   
+        $dateNow = date('Y-m-d H:i:s');
+
+        $tours = Tour::where('capacity', '>', '0')->where('dateTime' , '>', $dateNow)->with('themes')->get();
 
         return view('gegevens', ['tours' => $tours]);
     }
@@ -38,6 +32,7 @@ class OrderController extends Controller
         $reservation->comment = $request->message;
         $reservation->save();
 
+        $participants = 0;
         foreach($request->participant as $id => $person) {
             $participant[$id] = new Participant();
             $participant[$id]->reservation_id = $reservation->id;
@@ -46,7 +41,13 @@ class OrderController extends Controller
             $participant[$id]->lastname = $person['lastName'];
             $participant[$id]->birth_date = $person['date'].'-01';
             $participant[$id]->save();
+            $participants++;
         }
+
+        $tour = Tour::where('id', $reservation->tour_id)->get()->first();
+        $tour->capacity = $tour->capacity - $participants;
+        $tour->save();
+
         return redirect()->route('PaymentController', ['reservation' => $participant[$id]->reservation_id]);
     }
 }

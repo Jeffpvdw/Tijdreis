@@ -15,9 +15,12 @@ class PaymentController
         $participant = Participant::where(['reservation_id' => $reservationId])->get();
         $reservation = Reservation::find($reservationId);
 
-        $user = $reservation->email;
-
-
+        $user = new User();
+        $user->email = $reservation->email;
+        $user->tax_percentage = '21.00';
+        $user->password = md5(uniqid());
+        $user->name = $reservation->email;
+        $user->save();
 
         $item = new \Laravel\Cashier\Charge\ChargeItemBuilder($user);
         $item->unitPrice(money(20000, 'EUR')); //1 EUR
@@ -32,7 +35,6 @@ class PaymentController
         $result = $user->newCharge()
             ->addItem($chargeItem)
             ->addItem($chargeItem2)
-            ->setRedirectUrl('https://jimvogelzang.icthardenberg.nl/mollie.nl')
             ->create();
 
         if (is_a($result, \Laravel\Cashier\Http\RedirectToCheckoutResponse::class)) {
